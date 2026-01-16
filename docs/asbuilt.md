@@ -18,28 +18,31 @@ Tabela: `professor_entries`
 ## Roadmap Completo
 
 ### FASE 1: Setup e Infraestrutura
-**Status:** ⏳ Aguardando
+**Status:** ✅ Concluído
 **Subtasks:**
-- [ ] Inicializar Next.js e GitFlow
-- [ ] Configurar conexão Supabase (Client)
-- [ ] Criar tabela `professor_entries` no Supabase
+- [x] Inicializar Next.js e GitFlow
+- [x] Configurar conexão Supabase (Client)
+- [x] Criar tabela `professor_entries` no Supabase
 
 ### FASE 2: Visualização em Tempo Real (O Telão)
-**Status:** ⏳ Aguardando
+**Status:** ✅ Concluído
 **Subtasks:**
-- [ ] Criar hook `useRealtimeSubscription` para ouvir novos inserts
-- [ ] Criar componente `WordCloud` ou `LiveList`
-- [ ] Estilizar interface com identidade visual do evento (Moderno/Tech)
+- [x] Criar hook `useRealtimeSubscription` para ouvir novos inserts
+- [x] Criar componente `WordCloud` ou `LiveList`
+- [x] Estilizar interface com identidade visual do evento (Moderno/Tech)
 
 ### FASE 3: Teste de Carga e Ajustes
-**Status:** ⏳ Aguardando
+**Status:** ✅ Concluído
 **Subtasks:**
-- [ ] Simular inserções via script (mockando o n8n)
-- [ ] Ajustar animações e performance
+- [x] Simular inserções via script (mockando o n8n)
+- [x] Ajustar animações e performance
 
 ## Comandos Úteis
 ```bash
 # Rodar desenvolvimento
 npm run dev
+
+# Rodar simulação de entradas (Mock n8n)
+node scripts/mock-inserts.js
 ```
-Última Atualização: 2026-01-16 Atualizado por: J.A.R.V.I.S.
+Última Atualização: 2026-01-16 Atualizado por: Antigravity (IA)
