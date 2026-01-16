@@ -1,15 +1,15 @@
 'use client'
 
-import '@/utils/mockSimulator'
 import { useRealtimeProfessors } from '@/hooks/useRealtimeProfessors'
 import { CommunityCloud } from '@/components/CommunityCloud'
-import { motion } from 'framer-motion'
+import { DebugPanel } from '@/components/DebugPanel' // Importando o painel
+import '@/utils/mockSimulator' // Garante que o simulador está carregado
 
 export default function Home() {
   const professors = useRealtimeProfessors()
 
   return (
-    <main className="min-h-screen bg-slate-950 text-white overflow-hidden flex flex-col items-center">
+    <main className="min-h-screen bg-slate-950 text-white overflow-hidden flex flex-col items-center relative font-sans">
       {/* Cabeçalho */}
       <header className="w-full p-8 flex justify-between items-center bg-slate-900/50 backdrop-blur-sm border-b border-slate-800 z-10">
         <div className="flex flex-col">
@@ -36,10 +36,13 @@ export default function Home() {
         )}
       </div>
 
-      {/* Rodapé QR Code Call to Action */}
+      {/* Rodapé */}
       <footer className="w-full p-6 text-center text-slate-500 text-sm border-t border-slate-800 bg-slate-900/50">
         <p>Participe! Leia o QR Code e diga seu Nome e Disciplina.</p>
       </footer>
+
+      {/* Painel de Controle (Apenas Dev/Hml) */}
+      <DebugPanel />
     </main>
   )
 }

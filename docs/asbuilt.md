@@ -19,6 +19,7 @@ Tabela: `professor_entries`
 - Setup do Banco realizado via MCP (Supabase Tool)
 - Componente CommunityCloud implementado com Framer Motion.
 - Confete configurado para disparar apenas em novos inserts, utilizando paleta de cores do tema.
+- DebugPanel adicionado no canto inferior direito. Oculto em produção via verificação de hostname.
 
 ## Roadmap Completo
 
@@ -42,6 +43,7 @@ Tabela: `professor_entries`
 **Subtasks:**
 - [x] Simular inserções via script (mockando o n8n)
 - [x] Ajustar animações e performance
+- [x] Implementar DebugPanel para simulação visual controlada pelo cliente
 
 ## Como Testar
 Para simular inserts:
