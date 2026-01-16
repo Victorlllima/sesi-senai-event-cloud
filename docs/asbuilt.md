@@ -18,6 +18,7 @@ Tabela: `professor_entries`
 ## Notas Técnicas
 - Setup do Banco realizado via MCP (Supabase Tool)
 - Componente CommunityCloud implementado com Framer Motion.
+- Confete configurado para disparar apenas em novos inserts, utilizando paleta de cores do tema.
 
 ## Roadmap Completo
 
@@ -34,6 +35,7 @@ Tabela: `professor_entries`
 - [x] Criar hook `useRealtimeProfessors` para ouvir novos inserts
 - [x] Criar componente `CommunityCloud`
 - [x] Estilizar interface com identidade visual do evento (Moderno/Tech)
+- [x] Implementar animação de confete (canvas-confetti)
 
 ### FASE 3: Teste de Carga e Ajustes
 **Status:** ✅ Concluído

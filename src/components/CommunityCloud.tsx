@@ -3,12 +3,12 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { Professor } from '@/hooks/useRealtimeProfessors'
 import { useEffect, useRef } from 'react'
+import { triggerSparkle } from '@/utils/confetti'
 
 interface Props {
     professors: Professor[]
 }
 
-// Cores vibrantes para o tema Dark Tech do SENAI
 const COLORS = [
     'bg-blue-600', 'bg-cyan-500', 'bg-emerald-500',
     'bg-violet-600', 'bg-fuchsia-500', 'bg-rose-500'
@@ -16,10 +16,19 @@ const COLORS = [
 
 export function CommunityCloud({ professors }: Props) {
     const bottomRef = useRef<HTMLDivElement>(null)
+    const prevCount = useRef(professors.length)
 
-    // Auto-scroll suave se a tela encher
     useEffect(() => {
+        // Scroll automático
         bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
+
+        // Disparar Confete APENAS se entrou alguém novo (ignorando load inicial vazio)
+        if (professors.length > prevCount.current && professors.length > 0) {
+            triggerSparkle()
+        }
+
+        // Atualizar referência
+        prevCount.current = professors.length
     }, [professors])
 
     return (
