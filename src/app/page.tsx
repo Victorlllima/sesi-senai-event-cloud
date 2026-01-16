@@ -29,7 +29,7 @@ export default function Home() {
             />
           </div>
           <p className="text-icc-light/50 text-xs font-heading tracking-widest uppercase pl-1 border-l-2 border-icc-red">
-            ESG NA PRÁTICA PEDAGÓGICA
+            SUSTENTABILIDADE NA PRÁTICA PEDAGÓGICA
           </p>
         </div>
         <div className="text-right">
