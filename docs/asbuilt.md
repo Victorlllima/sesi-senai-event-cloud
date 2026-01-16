@@ -38,6 +38,7 @@ Tabela: `professor_entries`
 - [x] Criar componente `CommunityCloud`
 - [x] Estilizar interface com identidade visual do evento (Moderno/Tech)
 - [x] Implementar animação de confete (canvas-confetti)
+- [x] Fix: Ajuste de path da Logo e brilho do placeholder.
 
 ### FASE 3: Teste de Carga e Ajustes
 **Status:** ✅ Concluído
