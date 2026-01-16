@@ -20,6 +20,7 @@ Tabela: `professor_entries`
 - Componente CommunityCloud implementado com Framer Motion.
 - Confete configurado para disparar apenas em novos inserts, utilizando paleta de cores do tema.
 - DebugPanel adicionado no canto inferior direito. Oculto em produção via verificação de hostname.
+- Hook useRealtimeProfessors atualizado para escutar eventos de DELETE, permitindo limpeza automática da tela sem refresh.
 
 ## Roadmap Completo
 
