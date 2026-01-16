@@ -45,7 +45,8 @@ Tabela: `professor_entries`
 Para simular inserts:
 1. Abra o projeto no navegador (`npm run dev`).
 2. Abra o console do navegador (F12).
-3. Digite `window.simulate()` e pressione Enter.
+3. Digite `window.simulate()` para uma entrada única.
+4. Digite `window.populate(50)` - Simula a entrada de 50 pessoas em sequência.
 
 ## Comandos Úteis
 ```bash
