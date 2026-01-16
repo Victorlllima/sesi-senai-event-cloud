@@ -15,10 +15,14 @@ Tabela: `professor_entries`
 - `discipline` (text) - Disciplina
 - `created_at` (timestamp)
 
+## Notas Técnicas
+- Setup do Banco realizado via MCP (Supabase Tool)
+
+
 ## Roadmap Completo
 
 ### FASE 1: Setup e Infraestrutura
-**Status:** ✅ Concluído
+**Status:** ✅ Completa
 **Subtasks:**
 - [x] Inicializar Next.js e GitFlow
 - [x] Configurar conexão Supabase (Client)
