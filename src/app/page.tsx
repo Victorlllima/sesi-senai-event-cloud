@@ -31,6 +31,9 @@ export default function Home() {
           <p className="text-icc-light/50 text-xs font-heading tracking-widest uppercase pl-1 border-l-2 border-icc-red">
             SUSTENTABILIDADE NA PRÁTICA PEDAGÓGICA
           </p>
+          <p className="text-gray-400 text-sm font-semibold tracking-tight pl-1 mt-1">
+            SESI/SENAI
+          </p>
         </div>
         <div className="text-right">
           <p className="text-4xl font-heading font-bold text-white">{professors.length}</p>
