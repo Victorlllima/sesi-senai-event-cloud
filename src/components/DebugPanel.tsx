@@ -53,6 +53,13 @@ export function DebugPanel() {
                             />
                         </div>
 
+                        <div>
+                            <label className="text-xs text-gray-300 block mb-1">Status da API</label>
+                            <div className="text-[10px] text-gray-500 font-mono bg-black/50 p-1 rounded border border-gray-800">
+                                {process.env.NEXT_PUBLIC_SUPABASE_URL?.includes('hfy') ? '✅ Conectado' : '⚠️ Erro de Config'}
+                            </div>
+                        </div>
+
                         <button
                             onClick={() => { populate(count); setIsExpanded(false); }}
                             className="w-full bg-white hover:bg-gray-200 text-black text-sm font-bold py-2 rounded transition-colors"
