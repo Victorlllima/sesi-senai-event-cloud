@@ -1,6 +1,6 @@
 import { supabase } from '@/lib/supabase'
 
-// Lista expandida para dar variedade nos 50 nomes
+// Listas de dados para simulação
 const MOCK_NAMES = [
     'Ana', 'Carlos', 'Beatriz', 'João', 'Fernanda', 'Rafael', 'Mariana', 'Pedro', 'Lucas', 'Juliana',
     'Roberto', 'Camila', 'Bruno', 'Patricia', 'Gabriel', 'Larissa', 'Felipe', 'Vanessa', 'Thiago', 'Amanda',
@@ -22,20 +22,33 @@ export async function simulateEntry() {
     })
 }
 
-// Função para inserir vários de uma vez (com delay visual)
 export async function populate(count = 50) {
     console.log(`🚀 Iniciando inserção de ${count} professores...`)
-
     for (let i = 0; i < count; i++) {
         simulateEntry()
-        // Delay de 100ms para criar um efeito "cascata" na animação
         await new Promise(r => setTimeout(r, 100))
     }
-
     console.log('✅ Carga finalizada!')
+}
+
+// 🔥 NOVA FUNÇÃO: Limpar tudo
+export async function reset() {
+    console.log('🗑️ Limpando banco de dados...')
+
+    const { error } = await supabase
+        .from('professor_entries')
+        .delete()
+        .neq('id', '00000000-0000-0000-0000-000000000000') // Deleta tudo que não tem ID zero (todos)
+
+    if (error) {
+        console.error('Erro ao limpar:', error)
+    } else {
+        console.log('✨ Tela limpa com sucesso!')
+    }
 }
 
 if (typeof window !== 'undefined') {
     (window as any).simulate = simulateEntry;
     (window as any).populate = populate;
+    (window as any).reset = reset; // Expondo para o console
 }

@@ -49,6 +49,7 @@ Para simular inserts:
 2. Abra o console do navegador (F12).
 3. Digite `window.simulate()` para uma entrada única.
 4. Digite `window.populate(50)` - Simula a entrada de 50 pessoas em sequência.
+5. Digite `window.reset()` - Apaga todos os dados do banco e limpa a tela instantaneamente.
 
 ## Comandos Úteis
 ```bash
