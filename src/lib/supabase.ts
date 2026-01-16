@@ -1,8 +1,19 @@
 import { createClient } from '@supabase/supabase-js'
 
-// Tenta pegar a variável real. Se não existir (durante o build), usa um placeholder seguro.
-// Isso evita o erro "supabaseUrl is required" durante a pré-renderização estática.
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co'
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key'
+const rawUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const rawKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+// Debug: Avisa no console do navegador se as variáveis foram carregadas
+if (typeof window !== 'undefined') {
+    console.log('🔌 Supabase Connection Status:', {
+        hasUrl: !!rawUrl,
+        hasKey: !!rawKey,
+        env: process.env.NODE_ENV
+    })
+}
+
+// Fallback de segurança (Build Safe)
+const supabaseUrl = (rawUrl || 'https://placeholder.supabase.co').trim()
+const supabaseAnonKey = (rawKey || 'placeholder-key').trim()
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
