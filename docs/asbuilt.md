@@ -17,7 +17,7 @@ Tabela: `professor_entries`
 
 ## Notas Técnicas
 - Setup do Banco realizado via MCP (Supabase Tool)
-
+- Componente CommunityCloud implementado com Framer Motion.
 
 ## Roadmap Completo
 
@@ -29,10 +29,10 @@ Tabela: `professor_entries`
 - [x] Criar tabela `professor_entries` no Supabase
 
 ### FASE 2: Visualização em Tempo Real (O Telão)
-**Status:** ✅ Concluído
+**Status:** ✅ Completa
 **Subtasks:**
-- [x] Criar hook `useRealtimeSubscription` para ouvir novos inserts
-- [x] Criar componente `WordCloud` ou `LiveList`
+- [x] Criar hook `useRealtimeProfessors` para ouvir novos inserts
+- [x] Criar componente `CommunityCloud`
 - [x] Estilizar interface com identidade visual do evento (Moderno/Tech)
 
 ### FASE 3: Teste de Carga e Ajustes
@@ -41,12 +41,18 @@ Tabela: `professor_entries`
 - [x] Simular inserções via script (mockando o n8n)
 - [x] Ajustar animações e performance
 
+## Como Testar
+Para simular inserts:
+1. Abra o projeto no navegador (`npm run dev`).
+2. Abra o console do navegador (F12).
+3. Digite `window.simulate()` e pressione Enter.
+
 ## Comandos Úteis
 ```bash
 # Rodar desenvolvimento
 npm run dev
 
-# Rodar simulação de entradas (Mock n8n)
+# Rodar simulação de entradas (Mock n8n - Script Externo)
 node scripts/mock-inserts.js
 ```
 Última Atualização: 2026-01-16 Atualizado por: Antigravity (IA)
