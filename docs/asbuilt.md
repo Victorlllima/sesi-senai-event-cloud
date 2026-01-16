@@ -2,6 +2,12 @@
 
 ## Resumo
 Aplicação de visualização em tempo real para evento SESI/SENAI using IA e Sustentabilidade. Exibe "Nuvem de Comunidade" alimentada via n8n (WhatsApp).
+**Status:** 🚀 Em Produção / Publicado
+**Repositório:** [https://github.com/Victorlllima/sesi-senai-event-cloud](https://github.com/Victorlllima/sesi-senai-event-cloud)
+**URL de Produção:** [https://sesi-senai.vercel.app](https://sesi-senai.vercel.app)
+**Ambiente de Homologação (Cliente):** [https://sesi-senai-git-hml-redpros-projects.vercel.app](https://sesi-senai-git-hml-redpros-projects.vercel.app)
+
+
 
 ## Stack Técnica
 - **Frontend:** Next.js 14 (App Router), TailwindCSS, Framer Motion
@@ -17,10 +23,19 @@ Tabela: `professor_entries`
 
 ## Notas Técnicas
 - Setup do Banco realizado via MCP (Supabase Tool)
+- DebugPanel visível automaticamente em URLs contendo -hml (Homologação) e localhost.
 - Componente CommunityCloud implementado com Framer Motion.
 - Confete configurado para disparar apenas em novos inserts, utilizando paleta de cores do tema.
 - DebugPanel adicionado no canto inferior direito. Oculto em produção via verificação de hostname.
 - Hook useRealtimeProfessors atualizado para escutar eventos de DELETE, permitindo limpeza automática da tela sem refresh.
+- Identidade da marca ICC e do Instituto.CC implementada.
+- Deploy automatizado na Vercel com correção de variáveis de ambiente.
+
+## Histórico de Correções
+- **Build Safe Supabase:** `supabase.ts` atualizado com valores de fallback para evitar falha crítica de build (`supabaseUrl is required`) durante a pré-renderização na Vercel.
+- **Ambiente HML:** DebugPanel configurado para aparecer automaticamente em URLs de homologação (`-hml`).
+
+
 
 ## Roadmap Completo
 
