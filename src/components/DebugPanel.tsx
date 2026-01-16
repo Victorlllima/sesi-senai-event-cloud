@@ -5,14 +5,21 @@ import { populate, reset } from '@/utils/mockSimulator'
 
 export function DebugPanel() {
     const [isVisible, setIsVisible] = useState(false)
-    const [count, setCount] = useState(50)
+    const [count, setCount] = useState(10)
     const [isExpanded, setIsExpanded] = useState(false)
 
     useEffect(() => {
-        // Lógica para mostrar apenas em Dev/Hml (localhost ou preview vercel)
-        const isProduction = process.env.NODE_ENV === 'production' && window.location.hostname === 'sesi-senai-event.com'
+        const isDev = process.env.NODE_ENV !== 'production'
 
-        setIsVisible(!isProduction)
+        // Verifica se tem ?debug=true na URL
+        const isDebugQuery = typeof window !== 'undefined' && window.location.search.includes('debug=true')
+
+        // Verifica se é ambiente de Homologação (HML)
+        // A Vercel gera URLs tipo: projeto-git-hml-usuario.vercel.app
+        const isHml = typeof window !== 'undefined' && window.location.hostname.includes('-hml')
+
+        // Mostra se for: Localhost OU Homologação OU tiver ?debug=true
+        setIsVisible(isDev || isHml || isDebugQuery)
     }, [])
 
     if (!isVisible) return null
@@ -22,7 +29,7 @@ export function DebugPanel() {
             {/* Botão de Toggle (Engrenagem) */}
             <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="bg-slate-800 hover:bg-slate-700 text-white p-3 rounded-full shadow-lg border border-slate-600 transition-all font-sans"
+                className="bg-white hover:bg-gray-200 text-black p-3 rounded-full shadow-lg border border-slate-600 transition-all"
                 title="Painel de Simulação"
             >
                 ⚙️
@@ -30,25 +37,25 @@ export function DebugPanel() {
 
             {/* Painel Expansível */}
             {isExpanded && (
-                <div className="mt-2 bg-slate-900/90 backdrop-blur-md border border-slate-700 p-4 rounded-lg shadow-xl w-64 animate-in slide-in-from-bottom-2 font-sans">
-                    <h3 className="text-xs font-bold text-slate-400 uppercase mb-3 tracking-wider">
-                        Painel de Teste (DEV)
+                <div className="mt-2 bg-icc-black/90 backdrop-blur-md border border-gray-700 p-4 rounded-lg shadow-xl w-64 animate-in slide-in-from-bottom-2">
+                    <h3 className="text-xs font-bold text-gray-400 uppercase mb-3 tracking-wider">
+                        Painel de Teste (HML/ADMIN)
                     </h3>
 
                     <div className="space-y-3">
                         <div>
-                            <label className="text-xs text-slate-300 block mb-1">Qtd. Participantes</label>
+                            <label className="text-xs text-gray-300 block mb-1">Qtd. Participantes</label>
                             <input
                                 type="number"
                                 value={count}
                                 onChange={(e) => setCount(Number(e.target.value))}
-                                className="w-full bg-slate-800 border border-slate-600 rounded px-2 py-1 text-white text-sm focus:border-blue-500 outline-none"
+                                className="w-full bg-gray-800 border border-gray-600 rounded px-2 py-1 text-white text-sm focus:border-white outline-none"
                             />
                         </div>
 
                         <button
                             onClick={() => { populate(count); setIsExpanded(false); }}
-                            className="w-full bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold py-2 rounded transition-colors"
+                            className="w-full bg-white hover:bg-gray-200 text-black text-sm font-bold py-2 rounded transition-colors"
                         >
                             🚀 Simular Entrada
                         </button>
