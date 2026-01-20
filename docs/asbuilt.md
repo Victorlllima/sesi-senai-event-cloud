@@ -36,8 +36,25 @@ Aplicação de visualização em tempo real para evento SESI/SENAI using IA e Su
 - **Backend:** Supabase (Database + Realtime)
 - **Integração:** n8n (Insere dados no Supabase)
 
+## Automação e IA (n8n)
+- **Workflow:** `workflows/n8n/agente-facilitador.json`
+- **Descrição:** Agente que gerencia o fluxo de Credenciamento e Mentoria BNCC via WhatsApp
+- **Funcionalidades:**
+  - Captura de expectativas dos participantes
+  - Inserção em tempo real na tabela `participantes_palestra`
+  - Fase 2: Dinâmica pedagógica com tema escolhido coletivamente
+
 ## Schema do Banco de Dados (Contrato com n8n)
-Tabela: `professor_entries`
+
+### Tabela Atual: `participantes_palestra` (✅ Em Uso)
+- `id` (uuid, primary key)
+- `whatsapp_id` (text, unique) - ID do WhatsApp do participante
+- `nome` (text) - Nome do Participante
+- `expectativa` (text) - Expectativa/palavra-chave para nuvem de palavras
+- `tema_dinamica` (text, nullable) - Tema escolhido na Fase 2
+- `created_at` (timestamp)
+
+### Tabela Legado: `professor_entries` (⚠️ Preservada para Compatibilidade)
 - `id` (uuid, primary key)
 - `name` (text) - Nome do Professor
 - `discipline` (text) - Disciplina
