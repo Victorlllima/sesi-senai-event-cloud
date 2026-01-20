@@ -17,3 +17,12 @@ const supabaseUrl = (rawUrl || 'https://placeholder.supabase.co').trim()
 const supabaseAnonKey = (rawKey || 'placeholder-key').trim()
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+
+// Interface para a nova tabela participantes_palestra
+export interface ParticipanteEntry {
+    id: string
+    nome: string
+    expectativa: string // O antigo 'discipline' vira 'expectativa'
+    tema_dinamica?: string
+    created_at: string
+}

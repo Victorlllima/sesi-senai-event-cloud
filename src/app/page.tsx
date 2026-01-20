@@ -1,13 +1,13 @@
 'use client'
 
-import { useRealtimeProfessors } from '@/hooks/useRealtimeProfessors'
+import { useRealtimeParticipantes } from '@/hooks/useRealtimeParticipantes'
 import { CommunityCloud } from '@/components/CommunityCloud'
 import { DebugPanel } from '@/components/DebugPanel'
 import Image from 'next/image'
 import '@/utils/mockSimulator'
 
 export default function Home() {
-  const professors = useRealtimeProfessors()
+  const participantes = useRealtimeParticipantes()
 
   return (
     <main className="min-h-screen bg-icc-black text-white overflow-hidden flex flex-col items-center relative selection:bg-icc-red selection:text-white">
@@ -36,17 +36,17 @@ export default function Home() {
           </p>
         </div>
         <div className="text-right">
-          <p className="text-4xl font-heading font-bold text-white">{professors.length}</p>
+          <p className="text-4xl font-heading font-bold text-white">{participantes.length}</p>
           <p className="text-[10px] text-icc-red uppercase tracking-[0.3em] font-bold">Participantes</p>
         </div>
       </header>
 
       {/* Nuvem Central */}
       <div className="flex-1 w-full max-w-[90vw] relative flex items-center">
-        <CommunityCloud professors={professors} />
+        <CommunityCloud participantes={participantes} />
 
         {/* Placeholder (AGORA MAIS VISÍVEL) */}
-        {professors.length === 0 && (
+        {participantes.length === 0 && (
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-80">
             <p className="text-4xl font-heading font-bold tracking-tighter animate-pulse drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
               AGUARDANDO DADOS

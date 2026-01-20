@@ -1,5 +1,27 @@
 # Projeto: Nuvem de Comunidade SESI/SENAI
 
+## 🚧 EM REFATORAÇÃO (Branch: feature/pivot-palestra)
+**Data:** 2026-01-20
+**Status:** 🔄 Em Andamento
+
+Estamos migrando a estrutura de "Nuvem de Professores" para "Dinâmica Pedagógica".
+
+### Mudanças em Progresso:
+- **Tabela antiga:** `professor_entries` (✅ Preservada em dev para compatibilidade)
+- **Tabela nova:** `participantes_palestra` (✅ Criada nesta branch)
+- **Hook antigo:** `useRealtimeProfessors` (✅ Preservado)
+- **Hook novo:** `useRealtimeParticipantes` (✅ Criado)
+- **Campo chave:** `discipline` → `expectativa` (para nuvem de palavras)
+- **Novo campo:** `tema_dinamica` (para fase 2 da palestra)
+
+### Compatibilidade:
+- A branch `dev` continua funcionando com a estrutura antiga
+- Esta feature branch (`feature/pivot-palestra`) usa a nova estrutura
+- Após testes, será feito merge para `dev` quando aprovado
+
+---
+
+
 ## Resumo
 Aplicação de visualização em tempo real para evento SESI/SENAI using IA e Sustentabilidade. Exibe "Nuvem de Comunidade" alimentada via n8n (WhatsApp).
 **Status:** 🚀 Em Produção / Publicado
