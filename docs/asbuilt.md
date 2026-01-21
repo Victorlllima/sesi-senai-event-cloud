@@ -82,9 +82,12 @@ Tabela: `professor_entries`
 **Subtasks:**
 - [x] Criar componente FlippingCard
 - [x] Implementar grid inicial com dados do Supabase
+- [x] Implementar página Dashboard com fetch no Supabase
 - [ ] Adicionar filtros por pilar de inovação
 - [ ] Implementar busca semântica com RAG
 - [ ] Criar página de detalhes do episódio
+
+**Decisão de Arquitetura:** Extração do campo 'País' feita no frontend via parsing do título ('Escola - País').
 
 ### 📦 FASE 03: Sistema de Busca RAG
 **Status:** `⏳ Aguardando`
@@ -125,4 +128,4 @@ http://localhost:3000/dashboard
 
 ---
 
-Última Atualização: [2026-01-21 09:05] Atualizado por: ATLAS ⚙️
+Última Atualização: [2026-01-21 09:15] Atualizado por: ATLAS ⚙️
