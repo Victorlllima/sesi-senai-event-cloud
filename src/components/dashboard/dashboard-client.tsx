@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { FlippingCard } from "@/components/ui/flipping-card";
-import { Filter, X } from "lucide-react";
+import { Filter, X, Search } from "lucide-react";
 
 // Definição do formato de dados que virá do Server Component
 export interface SchoolEntry {
@@ -26,6 +26,7 @@ export function DashboardClient({ initialData }: DashboardClientProps) {
     // Estados dos Filtros
     const [selectedCountry, setSelectedCountry] = useState<string>("Todos");
     const [selectedMethodology, setSelectedMethodology] = useState<string>("Todas");
+    const [searchQuery, setSearchQuery] = useState<string>("");
 
     // Extrair opções únicas para os selects
     const countries = useMemo(() =>
@@ -46,7 +47,27 @@ export function DashboardClient({ initialData }: DashboardClientProps) {
     return (
         <div className="flex flex-col md:flex-row gap-8">
             {/* Sidebar de Filtros */}
-            <aside className="w-full md:w-64 space-y-8 bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl h-fit border border-neutral-200 dark:border-neutral-800">
+            <aside className="w-full md:w-64 space-y-6 bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl h-fit border border-neutral-200 dark:border-neutral-800">
+                {/* Barra de Busca Inteligente */}
+                <div className="mb-2">
+                    <label className="text-sm font-medium text-muted-foreground mb-2 block">
+                        Busca Inteligente
+                    </label>
+                    <div className="relative">
+                        <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                        <input
+                            type="text"
+                            placeholder="Ex: autonomia, natureza..."
+                            className="w-full pl-9 pr-4 py-2 rounded-md border border-neutral-300 bg-white dark:bg-black dark:border-neutral-700 text-sm focus:ring-2 focus:ring-primary"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                    </div>
+                    <p className="text-[10px] text-muted-foreground mt-1">
+                        *Busca semântica em breve
+                    </p>
+                </div>
+
                 <div className="flex items-center gap-2 mb-4">
                     <Filter className="w-5 h-5 text-primary" />
                     <h2 className="font-bold text-lg">Filtros</h2>

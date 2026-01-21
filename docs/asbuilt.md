@@ -36,6 +36,7 @@ Tabela: `professor_entries`
 - Supabase Server Client criado em `src/lib/supabase-server.ts` para Server Components.
 - Padrão Smart-Client/Dumb-Server implementado no Dashboard para filtros instantâneos.
 - Componente `DashboardClient` gerencia estado de filtros (País, Metodologia) no cliente.
+- Função RPC `match_documents` criada no Supabase para busca vetorial por similaridade de cosseno.
 
 ## Histórico de Correções
 - **Build Safe Supabase:** `supabase.ts` atualizado com valores de fallback para evitar falha crítica de build (`supabaseUrl is required`) durante a pré-renderização na Vercel.
@@ -94,11 +95,12 @@ Tabela: `professor_entries`
 **Decisão de Arquitetura:** Extração do campo 'País' feita no frontend via parsing do título ('Escola - País'). Padrão Smart-Client/Dumb-Server para filtros instantâneos.
 
 ### 📦 FASE 03: Sistema de Busca RAG
-**Status:** `⏳ Aguardando`
+**Status:** `🔄 Em Andamento`
 **Subtasks:**
-- [ ] Implementar endpoint de busca semântica
-- [ ] Criar interface de busca com input
-- [ ] Integrar resultados com UI
+- [x] Criar SQL `match_documents` para busca vetorial
+- [x] Adicionar Input de Busca na UI
+- [ ] Integrar API OpenAI/Supabase para gerar embeddings de busca
+- [ ] Conectar busca semântica aos cards
 
 ---
 
@@ -126,6 +128,7 @@ http://localhost:3000/dashboard
 
 | Data | Descrição | Status |
 |------|-----------|--------|
+| 2026-01-21 | FASE 03: Função RPC match_documents + Input de Busca na UI | 🔄 Em Andamento |
 | 2026-01-21 | Implementação Sidebar de Filtros (País, Metodologia) + Refatoração Server-Client | ✅ Completa |
 | 2026-01-21 | Implementação UI Dashboard: FlippingCard + Grid + Conexão Supabase | ✅ Completa |
 | 2026-01-21 | Ingestão RAG: 25 episódios indexados com embeddings | ✅ Completa |
@@ -133,4 +136,4 @@ http://localhost:3000/dashboard
 
 ---
 
-Última Atualização: [2026-01-21 09:21] Atualizado por: ATLAS ⚙️
+Última Atualização: [2026-01-21 09:27] Atualizado por: ATLAS ⚙️
