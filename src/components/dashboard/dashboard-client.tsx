@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useTransition } from "react";
 import { FlippingCard } from "@/components/ui/flipping-card";
-import { Filter, X, Search } from "lucide-react";
+import { Filter, X, Search, Loader2 } from "lucide-react";
+import { searchSchools } from "@/app/actions/search";
 
 // Definição do formato de dados que virá do Server Component
 export interface SchoolEntry {
@@ -23,12 +24,40 @@ interface DashboardClientProps {
 }
 
 export function DashboardClient({ initialData }: DashboardClientProps) {
-    // Estados dos Filtros
+    // Estados de Filtro Local
     const [selectedCountry, setSelectedCountry] = useState<string>("Todos");
     const [selectedMethodology, setSelectedMethodology] = useState<string>("Todas");
-    const [searchQuery, setSearchQuery] = useState<string>("");
 
-    // Extrair opções únicas para os selects
+    // Estados de Busca Semântica
+    const [searchQuery, setSearchQuery] = useState("");
+    const [searchResults, setSearchResults] = useState<SchoolEntry[] | null>(null);
+    const [isPending, startTransition] = useTransition();
+
+    // Executar busca ao pressionar Enter
+    const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            if (!searchQuery.trim()) {
+                setSearchResults(null);
+                return;
+            }
+
+            startTransition(async () => {
+                const results = await searchSchools(searchQuery);
+                setSearchResults(results);
+            });
+        }
+    };
+
+    // Limpar busca
+    const clearSearch = () => {
+        setSearchQuery("");
+        setSearchResults(null);
+    };
+
+    // Lógica Unificada: Se houver busca, usa searchResults. Se não, usa initialData.
+    const sourceData = searchResults || initialData;
+
+    // Extrair opções únicas para os selects (sempre do dataset completo)
     const countries = useMemo(() =>
         ["Todos", ...Array.from(new Set(initialData.map(d => d.filterMetadata.country))).sort()],
         [initialData]);
@@ -37,8 +66,8 @@ export function DashboardClient({ initialData }: DashboardClientProps) {
         ["Todas", ...Array.from(new Set(initialData.map(d => d.filterMetadata.methodology))).sort()],
         [initialData]);
 
-    // Lógica de Filtragem
-    const filteredSchools = initialData.filter((school) => {
+    // Aplica filtros locais (País/Metodologia) SOBRE o resultado da busca (ou dados iniciais)
+    const filteredSchools = sourceData.filter((school) => {
         const matchCountry = selectedCountry === "Todos" || school.filterMetadata.country === selectedCountry;
         const matchMethodology = selectedMethodology === "Todas" || school.filterMetadata.methodology === selectedMethodology;
         return matchCountry && matchMethodology;
@@ -48,24 +77,46 @@ export function DashboardClient({ initialData }: DashboardClientProps) {
         <div className="flex flex-col md:flex-row gap-8">
             {/* Sidebar de Filtros */}
             <aside className="w-full md:w-64 space-y-6 bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl h-fit border border-neutral-200 dark:border-neutral-800">
-                {/* Barra de Busca Inteligente */}
+
+                {/* Barra de Busca Inteligente Atualizada */}
                 <div className="mb-2">
                     <label className="text-sm font-medium text-muted-foreground mb-2 block">
-                        Busca Inteligente
+                        Busca IA
                     </label>
                     <div className="relative">
-                        <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                        {isPending ? (
+                            <Loader2 className="absolute left-3 top-2.5 h-4 w-4 animate-spin text-primary" />
+                        ) : (
+                            <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                        )}
+
                         <input
                             type="text"
                             placeholder="Ex: autonomia, natureza..."
-                            className="w-full pl-9 pr-4 py-2 rounded-md border border-neutral-300 bg-white dark:bg-black dark:border-neutral-700 text-sm focus:ring-2 focus:ring-primary"
+                            className="w-full pl-9 pr-8 py-2 rounded-md border border-neutral-300 bg-white dark:bg-black dark:border-neutral-700 text-sm focus:ring-2 focus:ring-primary"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
+                            onKeyDown={handleSearch}
+                            disabled={isPending}
                         />
+
+                        {searchQuery && !isPending && (
+                            <button
+                                onClick={clearSearch}
+                                className="absolute right-2 top-2.5 text-neutral-400 hover:text-neutral-600"
+                            >
+                                <X size={14} />
+                            </button>
+                        )}
                     </div>
                     <p className="text-[10px] text-muted-foreground mt-1">
-                        *Busca semântica em breve
+                        Pressione <strong>Enter</strong> para buscar
                     </p>
+                    {searchResults && (
+                        <p className="text-[10px] text-green-600 mt-1">
+                            🔍 {searchResults.length} resultado(s) encontrado(s)
+                        </p>
+                    )}
                 </div>
 
                 <div className="flex items-center gap-2 mb-4">
@@ -100,14 +151,14 @@ export function DashboardClient({ initialData }: DashboardClientProps) {
                 {/* Resumo */}
                 <div className="pt-4 border-t border-neutral-200 dark:border-neutral-700">
                     <p className="text-xs text-center text-muted-foreground">
-                        Mostrando <strong>{filteredSchools.length}</strong> de {initialData.length} escolas
+                        Mostrando <strong>{filteredSchools.length}</strong> de {sourceData.length} escolas
                     </p>
-                    {(selectedCountry !== "Todos" || selectedMethodology !== "Todas") && (
+                    {(selectedCountry !== "Todos" || selectedMethodology !== "Todas" || searchResults) && (
                         <button
-                            onClick={() => { setSelectedCountry("Todos"); setSelectedMethodology("Todas") }}
+                            onClick={() => { setSelectedCountry("Todos"); setSelectedMethodology("Todas"); clearSearch(); }}
                             className="w-full mt-3 text-xs flex items-center justify-center gap-1 text-red-500 hover:text-red-700"
                         >
-                            <X size={12} /> Limpar Filtros
+                            <X size={12} /> Limpar Tudo
                         </button>
                     )}
                 </div>
