@@ -106,6 +106,14 @@ Tabela: `professor_entries`
 
 **Arquitetura:** Server Action (`src/app/actions/search.ts`) + useTransition para UX suave.
 
+### 📦 FASE 04: Detalhes e Navegação
+**Status:** `✅ Completa`
+**Subtasks:**
+- [x] Criar rota dinâmica `/dashboard/episodio/[id]`
+- [x] Conectar link "Ver Detalhes" no Dashboard
+- [x] Buscar dados completos do Supabase (Content, BNCC, Metadados)
+- [x] UX: Header Hero com imagem determinística e botões de navegação
+
 ---
 
 ## Como Testar
@@ -132,6 +140,7 @@ http://localhost:3000/dashboard
 
 | Data | Descrição | Status |
 |------|-----------|--------|
+| 2026-01-21 | Merge da feature de detalhes. Sistema funcional completo em `dev`. | ✅ Completa |
 | 2026-01-21 | Página de Detalhes do Episódio (`/dashboard/episodio/[id]`) | ✅ Completa |
 | 2026-01-21 | FASE 03 Completa: Server Action + OpenAI Embeddings + Busca Híbrida | ✅ Completa |
 | 2026-01-21 | FASE 03: Função RPC match_documents + Input de Busca na UI | ✅ Completa |
@@ -142,4 +151,4 @@ http://localhost:3000/dashboard
 
 ---
 
-Última Atualização: [2026-01-21 09:43] Atualizado por: ATLAS ⚙️
+Última Atualização: [2026-01-21 09:49] Atualizado por: ATLAS ⚙️
