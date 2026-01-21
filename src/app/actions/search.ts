@@ -11,36 +11,42 @@ const openai = new OpenAI({
 export async function searchSchools(query: string): Promise<SchoolEntry[]> {
     if (!query.trim()) return [];
 
+    console.log("🔎 Iniciando busca para:", query); // Log de debug
+
     const supabase = await createServerClient();
 
     try {
-        // 1. Gerar Embedding da Query
+        // 1. Gerar Embedding
         const embeddingResponse = await openai.embeddings.create({
-            model: "text-embedding-3-small",
+            model: "text-embedding-3-small", // IMPORTANTE: Verifique se o banco usa este modelo ou o ada-002
             input: query,
             encoding_format: "float",
         });
 
         const queryEmbedding = embeddingResponse.data[0].embedding;
+        console.log("📊 Embedding gerado com", queryEmbedding.length, "dimensões");
 
-        // 2. Chamar RPC no Supabase
+        // 2. Chamar RPC - Threshold reduzido drasticamente para teste
         const { data: documents, error } = await supabase.rpc("match_documents", {
             query_embedding: queryEmbedding,
-            match_threshold: 0.5, // Ajuste conforme calibração necessária
+            match_threshold: 0.1, // BAIXAMOS DE 0.5 PARA 0.1
             match_count: 10,
         });
 
         if (error) {
-            console.error("Erro na busca vetorial:", error);
-            throw new Error("Falha na busca");
+            console.error("❌ Erro RPC Supabase:", error); // Verifique este log no terminal
+            throw new Error(error.message);
         }
 
-        // 3. Transformar dados para o formato visual (Mesma lógica do page.tsx)
-        // Nota: Em refatoração futura, extrair isso para um helper compartilhado
+        console.log(`✅ Encontrados ${documents?.length || 0} documentos.`);
+
+        if (!documents || documents.length === 0) {
+            return [];
+        }
+
+        // 3. Transformar dados
         const results: SchoolEntry[] = documents.map((doc: any, index: number) => {
             const meta = doc.metadata;
-
-            // Lógica de Extração: "Escola - País"
             const titleParts = meta.titulo?.split("-") || [meta.titulo];
             const schoolName = titleParts[0]?.trim();
             const country = titleParts.length > 1 ? titleParts[titleParts.length - 1].trim() : "Localização não inf.";
@@ -71,7 +77,7 @@ export async function searchSchools(query: string): Promise<SchoolEntry[]> {
         return results;
 
     } catch (err) {
-        console.error("Erro no action searchSchools:", err);
+        console.error("❌ Erro CRÍTICO no action searchSchools:", err);
         return [];
     }
 }
