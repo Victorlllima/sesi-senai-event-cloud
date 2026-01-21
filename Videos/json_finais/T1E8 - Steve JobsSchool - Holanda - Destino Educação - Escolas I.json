@@ -1,0 +1,24 @@
+{
+  "pageContent": "A Steve Jobs School, localizada na Holanda, adota uma metodologia inovadora que prioriza a personalização da aprendizagem e a autonomia dos alunos. Utilizando tecnologia como iPads, a escola permite que os estudantes trabalhem em seus próprios níveis e ritmos, facilitando o acesso à informação e promovendo um ambiente de aprendizado mais dinâmico e interativo. A filosofia da escola se baseia na confiança, onde os alunos são incentivados a assumir a responsabilidade por seu próprio aprendizado, estabelecendo objetivos pessoais e discutindo seu progresso a cada seis semanas com professores e pais.\n\nO ambiente escolar é projetado para ser acolhedor e flexível, com espaços que permitem diferentes formas de interação e aprendizado. As aulas são estruturadas em workshops e estúdios, onde os alunos podem explorar suas habilidades e interesses, muitas vezes em colaboração com seus colegas. Essa abordagem não apenas aumenta o engajamento dos alunos, mas também promove um senso de comunidade e responsabilidade compartilhada entre alunos, pais e educadores.\n\nA escola também se destaca pela forte participação dos pais, que são convidados a se envolver ativamente na educação de seus filhos, seja através de aulas, workshops ou simplesmente acompanhando o progresso escolar. Essa colaboração estreita entre escola e família é fundamental para criar um ambiente de aprendizado mais rico e significativo, onde cada criança pode prosperar de acordo com suas próprias habilidades e interesses.\n\nEm suma, a Steve Jobs School resolve problemas comuns enfrentados em escolas tradicionais, como a falta de engajamento e a rigidez no currículo, ao oferecer um modelo de educação que valoriza a individualidade e a criatividade dos alunos, preparando-os melhor para os desafios do futuro.",
+  "metadata": {
+    "titulo": "Steve Jobs School - Holanda",
+    "temporada": 1,
+    "episodio": 8,
+    "pilar_inovacao": "Autonomia do Aluno",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "desmotivação",
+      "rigidez curricular"
+    ],
+    "gatilhos_conteudo": [
+      "Tecnologia",
+      "Educação Personalizada",
+      "Aprendizagem Ativa"
+    ],
+    "competencias_bncc": [
+      "Competência 4 - Comunicação",
+      "Competência 5 - Cultura Digital",
+      "Competência 6 - Trabalho e Projetos"
+    ]
+  }
+}

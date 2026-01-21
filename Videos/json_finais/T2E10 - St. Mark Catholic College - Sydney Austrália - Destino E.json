@@ -1,0 +1,24 @@
+{
+  "pageContent": "A St. Mark Catholic College, localizada em Sydney, Austrália, adota uma metodologia educacional inovadora que se concentra na aprendizagem centrada no aluno e na colaboração. A escola promove um ambiente de aprendizagem aberto, onde os alunos trabalham em grupos e têm acesso a múltiplos professores, permitindo uma abordagem personalizada e inclusiva. A metodologia é baseada em projetos, onde os alunos são incentivados a explorar suas curiosidades e a desenvolver habilidades do século XXI, como pensamento crítico e resolução de problemas. Os professores atuam como facilitadores, ajudando os alunos a identificar suas áreas de desenvolvimento e a estabelecer objetivos claros para seu aprendizado.\n\nA escola enfrenta desafios comuns, como a passividade dos alunos e a resistência dos professores a mudar seu papel tradicional. No entanto, ao empoderar os alunos e permitir que eles liderem suas próprias iniciativas, a St. Mark Catholic College transforma a dinâmica da sala de aula. Os alunos são incentivados a se envolver em projetos que têm impacto real na comunidade, promovendo um senso de responsabilidade e pertencimento. Além disso, a integração de tecnologia, como o uso de VR e programação, enriquece a experiência de aprendizado e prepara os alunos para o futuro.\n\nA St. Mark Catholic College também se destaca por sua forte conexão com a comunidade local e por sua abordagem inclusiva, que valoriza a diversidade e promove a sustentabilidade. A escola busca constantemente melhorar e adaptar suas práticas educacionais, garantindo que todos os alunos tenham a oportunidade de prosperar em um ambiente que valoriza a colaboração, a criatividade e o aprendizado contínuo.",
+  "metadata": {
+    "titulo": "St. Mark Catholic College - Sydney/Austrália",
+    "temporada": 2,
+    "episodio": 10,
+    "pilar_inovacao": "Aprendizagem Baseada em Projetos",
+    "gatilhos_comportamentais": [
+      "passividade dos alunos",
+      "resistência dos professores",
+      "falta de engajamento"
+    ],
+    "gatilhos_conteudo": [
+      "Ciências",
+      "Tecnologia",
+      "Engenharia",
+      "Matemática"
+    ],
+    "competencias_bncc": [
+      "Competência 5 - Cultura Digital",
+      "Competência 6 - Trabalho e Projeto de Vida"
+    ]
+  }
+}

@@ -30,6 +30,10 @@ Tabela: `professor_entries`
 - Hook useRealtimeProfessors atualizado para escutar eventos de DELETE, permitindo limpeza automática da tela sem refresh.
 - Identidade da marca ICC e do Instituto.CC implementada.
 - Deploy automatizado na Vercel com correção de variáveis de ambiente.
+- Componente FlippingCard adicionado em `src/components/ui/flipping-card.tsx`.
+- Extração de país implementada on-the-fly no frontend via string parsing do campo `titulo`.
+- Utilitário `cn` (clsx + tailwind-merge) criado em `src/lib/utils.ts`.
+- Supabase Server Client criado em `src/lib/supabase-server.ts` para Server Components.
 
 ## Histórico de Correções
 - **Build Safe Supabase:** `supabase.ts` atualizado com valores de fallback para evitar falha crítica de build (`supabaseUrl is required`) durante a pré-renderização na Vercel.
@@ -62,6 +66,35 @@ Tabela: `professor_entries`
 - [x] Ajustar animações e performance
 - [x] Implementar DebugPanel para simulação visual controlada pelo cliente
 
+---
+
+## 🆕 NOVO ROADMAP: Atlas de Inovação Educacional
+
+### 📦 FASE 01: Ingestão RAG
+**Status:** ✅ Completa
+**Subtasks:**
+- [x] Criar tabela `documents` com embedding vector(1536)
+- [x] Desenvolver script `ingestao_rag.py` para popular banco
+- [x] Validar estrutura de metadados no Supabase
+
+### 📦 FASE 02: Interface do Dashboard
+**Status:** `🔄 Em Andamento`
+**Subtasks:**
+- [x] Criar componente FlippingCard
+- [x] Implementar grid inicial com dados do Supabase
+- [ ] Adicionar filtros por pilar de inovação
+- [ ] Implementar busca semântica com RAG
+- [ ] Criar página de detalhes do episódio
+
+### 📦 FASE 03: Sistema de Busca RAG
+**Status:** `⏳ Aguardando`
+**Subtasks:**
+- [ ] Implementar endpoint de busca semântica
+- [ ] Criar interface de busca com input
+- [ ] Integrar resultados com UI
+
+---
+
 ## Como Testar
 Para simular inserts:
 1. Abra o projeto no navegador (`npm run dev`).
@@ -77,5 +110,19 @@ npm run dev
 
 # Rodar simulação de entradas (Mock n8n - Script Externo)
 node scripts/mock-inserts.js
+
+# Acessar Dashboard de Inovação
+http://localhost:3000/dashboard
 ```
-Última Atualização: 2026-01-16 Atualizado por: Antigravity (IA)
+
+## Histórico de Sessões
+
+| Data | Descrição | Status |
+|------|-----------|--------|
+| 2026-01-21 | Implementação UI Dashboard: FlippingCard + Grid + Conexão Supabase | ✅ Completa |
+| 2026-01-21 | Ingestão RAG: 81 episódios indexados com embeddings | ✅ Completa |
+| 2026-01-20 | Pivot para modelo RAG e planejamento Atlas Educacional | ✅ Completa |
+
+---
+
+Última Atualização: [2026-01-21 09:05] Atualizado por: ATLAS ⚙️

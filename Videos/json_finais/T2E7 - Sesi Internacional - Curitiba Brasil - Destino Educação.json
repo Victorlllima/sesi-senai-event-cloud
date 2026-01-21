@@ -1,0 +1,24 @@
+{
+  "pageContent": "# Sesi Internacional - Curitiba, Brasil\n\nO Sesi Internacional, localizado em Curitiba, é uma escola que se destaca por sua metodologia inovadora, focada na construção do conhecimento de forma colaborativa e contextualizada. A proposta pedagógica rompe com o modelo tradicional de ensino, que é centrado em um currículo fechado e conteúdos obrigatórios. Em vez disso, a escola promove um ambiente onde os alunos são incentivados a pesquisar, discutir e construir seu próprio conhecimento, alinhando-se às realidades e demandas do mundo contemporâneo.\n\nAs aulas são estruturadas em grupos, permitindo que os alunos interajam constantemente, desenvolvendo habilidades sociais e de trabalho em equipe. Os professores atuam como mediadores, desafiando os alunos a explorarem temas relevantes, como a Revolução Russa, por meio de pesquisas e discussões em grupo. Essa abordagem não apenas facilita a aprendizagem de conteúdos acadêmicos, mas também prepara os alunos para um futuro em que a colaboração e a comunicação são essenciais.\n\nOutro aspecto inovador da escola é a imersão no ensino de idiomas, especialmente o inglês, que é integrado ao currículo de forma prática e contínua. Os alunos têm aulas em inglês desde o primeiro ano e participam de um Language Lab, onde desenvolvem suas habilidades linguísticas em um ambiente de apoio. Essa metodologia tem mostrado resultados significativos, com alunos que entram sem conhecimento prévio do idioma alcançando fluência em pouco tempo.\n\nAlém disso, o Sesi Internacional oferece uma variedade de oficinas extracurriculares, permitindo que os alunos escolham áreas de interesse e desenvolvam projetos que refletem suas paixões. Essa flexibilidade e personalização do aprendizado são fundamentais para engajar os alunos e promover um ambiente escolar positivo e inclusivo, onde cada estudante é reconhecido como um indivíduo único e valioso.\n\nEm resumo, o Sesi Internacional é uma escola que não apenas ensina conteúdos, mas também forma cidadãos críticos e colaborativos, prontos para enfrentar os desafios do mundo atual, promovendo uma educação que vai além do tradicional e se adapta às necessidades do século XXI.",
+  "metadata": {
+    "titulo": "Sesi Internacional - Curitiba/Brasil",
+    "temporada": 2,
+    "episodio": 7,
+    "pilar_inovacao": "Aprendizagem Colaborativa",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "dificuldade de socialização",
+      "desmotivação"
+    ],
+    "gatilhos_conteudo": [
+      "História",
+      "Língua Inglesa",
+      "Educação Ambiental"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 5 - Cultura Digital",
+      "Competência 6 - Trabalho e Projeto de Vida"
+    ]
+  }
+}

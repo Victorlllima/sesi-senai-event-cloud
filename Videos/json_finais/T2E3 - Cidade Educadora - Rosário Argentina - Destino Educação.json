@@ -1,0 +1,25 @@
+{
+  "pageContent": "A Cidade Educadora de Rosário, na Argentina, adota uma abordagem inovadora para a educação, integrando a cidade como um espaço de aprendizado contínuo. A metodologia se baseia na ideia de que a educação não se limita às paredes da escola, mas se estende a toda a cidade, onde cada espaço público, cultural e artístico se torna uma oportunidade de aprendizado. Os alunos são incentivados a participar de atividades extracurriculares, como esportes, dança e aprendizado de idiomas, que se conectam com o currículo escolar, promovendo uma educação mais rica e diversificada. A proposta inclui a utilização de espaços como o Tríptico da Infância, que oferece experiências educativas em ambientes naturais e culturais, permitindo que as crianças explorem e aprendam de forma lúdica e interativa.\n\nAlém disso, a metodologia valoriza a interdisciplinaridade, onde professores de diferentes áreas colaboram em projetos que envolvem saídas de campo e visitas a museus, como o Museu da Memória, para discutir temas relevantes da história argentina. Essa abordagem não só enriquece o aprendizado, mas também promove a formação de cidadãos críticos e conscientes, que entendem a importância de sua história e cultura. A cidade de Rosário, com sua rica oferta cultural e artística, se transforma em um verdadeiro laboratório de aprendizado, onde os alunos são estimulados a se tornarem agentes ativos em suas comunidades, desenvolvendo habilidades essenciais para a vida em sociedade.",
+  "metadata": {
+    "titulo": "Cidade Educadora - Rosário, Argentina",
+    "temporada": 2,
+    "episodio": 3,
+    "pilar_inovacao": "Cidade Educadora",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "desconexão com a realidade",
+      "apatia"
+    ],
+    "gatilhos_conteudo": [
+      "História",
+      "Artes",
+      "Educação Física",
+      "Línguas Estrangeiras"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 5 - Cultura Digital",
+      "Competência 6 - Trabalho e Projeto de Vida"
+    ]
+  }
+}

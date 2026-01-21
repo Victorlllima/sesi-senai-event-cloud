@@ -1,0 +1,24 @@
+{
+  "pageContent": "A Ross School, localizada em East Hampton, EUA, adota uma abordagem educacional inovadora que integra diversas disciplinas em um currículo coeso e cronológico. Com uma forte ênfase na educação global, a escola atende a uma população estudantil diversificada, com cerca de 50% de alunos internacionais. A metodologia da Ross School é centrada no aprendizado baseado em inquérito, onde os alunos são incentivados a explorar e articular seus pensamentos de maneira crítica e criativa. O currículo espiral permite que os alunos aprendam sobre diferentes períodos históricos de forma interconectada, integrando disciplinas como História, Ciência, Arte e Literatura, o que promove uma compreensão mais profunda e contextualizada do conhecimento. Além disso, a escola utiliza um sistema de avaliação diferenciado, que se afasta das notas tradicionais e foca em resultados de saída, permitindo que os alunos se destaquem em áreas específicas de suas aulas.\n\nOutro aspecto inovador da Ross School é o Labo de Inovação, um espaço dedicado ao desenvolvimento de habilidades práticas em ciência, matemática e tecnologia. Os alunos têm a oportunidade de trabalhar em projetos independentes, utilizando recursos como impressão 3D e robótica, o que fomenta a criatividade e a colaboração. A escola também prioriza a saúde e o bem-estar dos alunos, oferecendo uma alimentação saudável e promovendo atividades que incentivam o desenvolvimento de habilidades socioemocionais. Com um ambiente que valoriza a autonomia e a colaboração, a Ross School prepara seus alunos para serem cidadãos globais, capazes de enfrentar desafios complexos e contribuir positivamente para a sociedade.",
+  "metadata": {
+    "titulo": "Ross School - East Hampton, EUA",
+    "temporada": 1,
+    "episodio": 9,
+    "pilar_inovacao": "Aprendizagem por Projetos",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "dificuldade de articulação",
+      "isolamento social"
+    ],
+    "gatilhos_conteudo": [
+      "História",
+      "Ciência",
+      "Artes"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 4 - Comunicação",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "pageContent": "A Escola dels Encants, localizada em Barcelona, Espanha, adota uma metodologia inovadora que prioriza a autonomia do aluno e a aprendizagem em ambientes diversificados. A escola foi projetada para que as crianças possam circular livremente entre diferentes espaços de aprendizagem, cada um com um foco específico, como matemática, ciências, arte e comunicação. Essa abordagem permite que os alunos escolham onde e como querem aprender, respeitando seus ritmos individuais e promovendo um ambiente de descoberta e criatividade. Além disso, a escola integra as duas línguas oficiais da Catalunha, catalão e castelhano, em sua prática pedagógica, garantindo que todos os alunos se tornem bilíngues desde cedo.\n\nOs ambientes de aprendizagem são cuidadosamente planejados para estimular a curiosidade e a interação entre os alunos. Cada espaço é tutelado por um professor que atua como facilitador, ajudando os alunos a se tornarem protagonistas de seu próprio aprendizado. A escola também promove a inclusão e a diversidade, garantindo que todos os alunos, independentemente de suas necessidades educativas, possam participar plenamente da vida escolar. A avaliação é contínua e envolve tanto a autoavaliação dos alunos quanto a observação dos professores, criando um ciclo de feedback que enriquece o processo educativo.\n\nA Escola dels Encants não apenas se preocupa com o desenvolvimento acadêmico, mas também com o bem-estar emocional dos alunos. A metodologia enfatiza a importância das emoções na aprendizagem, criando um ambiente seguro e acolhedor onde cada criança pode expressar sua identidade. A participação das famílias é incentivada, com comissões que envolvem pais e professores na tomada de decisões, fortalecendo a comunidade escolar. Assim, a escola se posiciona como um espaço de inovação educacional que busca preparar os alunos para um futuro dinâmico e em constante mudança.",
+  "metadata": {
+    "titulo": "Escola dels Encants - Barcelona/Espanha",
+    "temporada": 2,
+    "episodio": 2,
+    "pilar_inovacao": "Autonomia do Aluno",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "dificuldades de aprendizagem",
+      "exclusão"
+    ],
+    "gatilhos_conteudo": [
+      "Matemática",
+      "Ciências",
+      "Artes"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

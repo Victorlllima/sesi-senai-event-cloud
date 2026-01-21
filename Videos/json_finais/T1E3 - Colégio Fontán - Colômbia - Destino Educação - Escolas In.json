@@ -1,0 +1,26 @@
+{
+  "pageContent": "O Colégio Fontán, localizado na Colômbia, adota uma metodologia inovadora que coloca o sistema educativo a serviço dos alunos, priorizando a autonomia e a personalização do aprendizado. Ao invés de seguir um modelo tradicional onde todos os alunos aprendem o mesmo conteúdo no mesmo ritmo, a escola organiza seus estudantes em diferentes salões, cada um representando um nível de autonomia e responsabilidade. Os alunos têm a liberdade de gerenciar seu próprio tempo e escolher atividades que se alinhem com seus interesses, como esportes ou artes, promovendo um ambiente de aprendizado menos estressante e mais motivador.\n\nOs educadores, chamados de analistas, atuam como guias, ajudando os alunos a desenvolverem suas habilidades de forma individualizada. Através de uma plataforma tecnológica chamada Kino, os estudantes podem acessar seus planos de estudo e acompanhar seu progresso, enquanto os analistas oferecem feedback contínuo. Essa abordagem permite que cada aluno avance em seu próprio ritmo, focando em suas necessidades e interesses específicos, o que resulta em um aprendizado mais significativo e engajado.\n\nAlém disso, o Colégio Fontán implementa um sistema de avaliação que não se baseia em provas tradicionais, mas sim em projetos de grau e investigações que os alunos devem defender. Essa metodologia não apenas desenvolve habilidades acadêmicas, mas também competências pessoais, preparando os estudantes para serem cidadãos autônomos e responsáveis. A escola também promove a Educação Relacional, incentivando a colaboração e a resolução de problemas em grupo, o que fortalece a comunidade escolar e a capacidade dos alunos de se relacionarem com os outros de forma construtiva.",
+  "metadata": {
+    "titulo": "Colégio Fontán - Colômbia",
+    "temporada": 1,
+    "episodio": 3,
+    "pilar_inovacao": "Autonomia do Aluno",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "estresse",
+      "desmotivação"
+    ],
+    "gatilhos_conteudo": [
+      "Educação Relacional",
+      "Artes",
+      "Esportes",
+      "Ciências",
+      "Matemáticas"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 5 - Cultura Digital",
+      "Competência 6 - Trabalho e Projeto de Vida"
+    ]
+  }
+}

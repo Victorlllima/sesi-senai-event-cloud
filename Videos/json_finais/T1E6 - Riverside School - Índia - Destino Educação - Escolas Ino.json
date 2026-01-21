@@ -1,0 +1,24 @@
+{
+  "pageContent": "A Riverside School, localizada na Índia, adota uma metodologia inovadora que se baseia na consciência, empoderamento e interdependência dos alunos. A escola atende cerca de 400 alunos, com uma equipe de 65 professores, e se destaca por sua abordagem centrada no desenvolvimento do caráter e na cidadania. Desde o pré-secundário até o 12º grau, os alunos são incentivados a se tornarem protagonistas de suas próprias histórias, aprendendo a importância da empatia e do respeito em suas interações diárias. O currículo é estruturado em três fases: a fase de consciência, onde os alunos são introduzidos ao mundo ao seu redor; a fase de empoderamento, que ensina estratégias para a independência; e a fase de interdependência, onde os alunos colaboram e se apoiam mutuamente.\n\nA metodologia da Riverside School também inclui um forte componente de aprendizagem prática e projetos de vida, onde os alunos se envolvem em causas sociais e desenvolvem habilidades de resolução de problemas. O Programa de Cidadania, por exemplo, permite que os alunos trabalhem com ONGs e causas sociais ao longo de cinco anos, promovendo um senso de responsabilidade e compaixão. Além disso, a escola promove um ambiente de avaliação contínua, onde o foco está no crescimento individual dos alunos, ao invés de comparações entre eles. Isso é complementado por um sistema de feedback entre pares, que encoraja a autoavaliação e a construção de relações respeitosas.\n\nA Riverside School também se destaca por sua inclusão e diversidade, atendendo alunos de diferentes origens socioeconômicas, com 25% dos alunos recebendo educação gratuita. A escola promove um ambiente onde todos os alunos, independentemente de sua origem, têm a oportunidade de aprender e crescer juntos. Essa abordagem não apenas prepara os alunos para o futuro, mas também os ensina a importância de contribuir para a sociedade de forma significativa e respeitosa.",
+  "metadata": {
+    "titulo": "Riverside School - Índia",
+    "temporada": 1,
+    "episodio": 6,
+    "pilar_inovacao": "Desenvolvimento do Caráter e Cidadania",
+    "gatilhos_comportamentais": [
+      "bullying",
+      "falta de empatia",
+      "desengajamento"
+    ],
+    "gatilhos_conteudo": [
+      "Cidadania",
+      "Resolução de Problemas",
+      "Educação Socioemocional"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 5 - Cultura Digital",
+      "Competência 10 - Empatia e Respeito"
+    ]
+  }
+}

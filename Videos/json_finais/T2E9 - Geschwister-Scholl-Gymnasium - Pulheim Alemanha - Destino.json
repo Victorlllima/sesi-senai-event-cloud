@@ -1,0 +1,24 @@
+{
+  "pageContent": "O Geschwister-Scholl-Gymnasium, localizado em Pulheim, Alemanha, adota uma metodologia inovadora centrada na inclusão e na diversidade, promovendo um ambiente educacional onde alunos com e sem necessidades especiais aprendem juntos. A escola se destaca por suas práticas de inclusão, permitindo que crianças com deficiências estudem ao lado de seus colegas. Essa abordagem não apenas facilita a convivência, mas também enriquece a experiência de aprendizado, promovendo habilidades sociais e emocionais essenciais. Os professores atuam como facilitadores e amigos, criando um ambiente familiar que encoraja a comunicação aberta e a empatia entre os alunos.\n\nA metodologia da escola também enfatiza a autonomia dos alunos, permitindo que eles escolham atividades e cursos que correspondam aos seus interesses, como futebol e projetos sociais. As aulas são estruturadas para incluir práticas ativas, onde os alunos têm a liberdade de explorar diferentes ambientes de aprendizado, como bibliotecas e espaços externos. Essa flexibilidade ajuda a manter os alunos engajados e motivados, ao mesmo tempo em que promove a responsabilidade e a autoeficácia.\n\nAlém disso, a escola implementa um sistema de apoio psicológico robusto, onde os alunos têm acesso a conselheiros e recursos que ajudam a resolver conflitos e a lidar com questões emocionais. A abordagem de 'No Blame' para resolução de conflitos é um exemplo de como a escola prioriza a construção de um ambiente seguro e acolhedor. O Geschwister-Scholl-Gymnasium não apenas prepara seus alunos academicamente, mas também os capacita a se tornarem cidadãos conscientes e ativos, prontos para enfrentar os desafios do mundo moderno.",
+  "metadata": {
+    "titulo": "Geschwister-Scholl-Gymnasium - Pulheim/Alemanha",
+    "temporada": 2,
+    "episodio": 9,
+    "pilar_inovacao": "Inclusão e Diversidade",
+    "gatilhos_comportamentais": [
+      "bullying",
+      "falta de engajamento",
+      "dificuldades emocionais"
+    ],
+    "gatilhos_conteudo": [
+      "Educação Inclusiva",
+      "Educação Socioemocional",
+      "Ciências"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 2 - Pensamento Crítico",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "pageContent": "A Väätsa Põhikool, localizada em Väätsa, Estônia, adota uma metodologia educacional inovadora que prioriza a autonomia do aluno e a integração de tecnologias no processo de aprendizagem. A escola acredita que a educação deve ser uma experiência prática e envolvente, onde os alunos não apenas absorvem conhecimento, mas também o aplicam em situações reais. Isso é evidenciado pelo uso de tecnologias como robôs e microcontroladores, que são incorporados nas aulas desde os primeiros anos até a nona série. Os alunos têm a liberdade de explorar diferentes métodos de aprendizagem, o que os encoraja a se tornarem protagonistas de seu próprio processo educativo.\n\nO ambiente escolar é projetado para promover a interação e a colaboração. Com turmas pequenas, os professores conseguem oferecer atenção individualizada, criando um ambiente familiar que favorece o aprendizado. A metodologia da escola também inclui a realização de projetos práticos, como experimentos científicos e atividades que envolvem a comunidade, permitindo que os alunos vejam a relevância do que aprendem no dia a dia. Um exemplo notável é o projeto de estratosfera, onde os alunos trabalham em equipe para enviar um balão a grandes altitudes, integrando conhecimentos de física e tecnologia.\n\nAlém disso, a Väätsa Põhikool enfatiza a importância do reconhecimento e do feedback positivo entre alunos e professores, promovendo um ambiente de apoio mútuo. Isso ajuda a combater problemas como a falta de engajamento e a apatia, comuns em ambientes escolares tradicionais. Com essa abordagem, a escola não apenas ensina conteúdos acadêmicos, mas também desenvolve habilidades socioemocionais essenciais para a formação integral dos alunos, preparando-os para os desafios do futuro.",
+  "metadata": {
+    "titulo": "Väätsa Põhikool - Väätsa, Estônia",
+    "temporada": 2,
+    "episodio": 5,
+    "pilar_inovacao": "Autonomia do Aluno",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "apatia"
+    ],
+    "gatilhos_conteudo": [
+      "Ciências",
+      "Matemática",
+      "Tecnologia"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 4 - Comunicação",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

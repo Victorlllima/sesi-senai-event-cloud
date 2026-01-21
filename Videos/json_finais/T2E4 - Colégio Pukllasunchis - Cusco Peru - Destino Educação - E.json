@@ -1,0 +1,24 @@
+{
+  "pageContent": "O Colégio Pukllasunchis, localizado em Cusco, Peru, adota uma metodologia inovadora que integra a cultura andina e a diversidade dos alunos em seu currículo. O nome 'Pukllasunchis' significa 'joguemos', refletindo a abordagem lúdica e colaborativa do aprendizado. As aulas são estruturadas para serem interativas e envolventes, permitindo que os alunos aprendam de forma prática e significativa, em vez de se sentirem sobrecarregados por avaliações tradicionais. A escola valoriza a conexão com a natureza e a cultura local, promovendo atividades que respeitam e celebram a Pachamama e o legado inca, como o cultivo de hortas e a realização de rituais agrícolas. Além disso, a metodologia inclui a promoção do idioma quechua, que é ensinado como parte do currículo, reconhecendo sua importância cultural e histórica.\n\nOs alunos são incentivados a participar ativamente da construção de seu ambiente escolar, desde a escolha da infraestrutura até a definição das atividades. A escola também prioriza a formação integral dos alunos, abordando temas como gênero, interculturalidade e sustentabilidade. A tutoria é um aspecto central da experiência educacional, onde os professores atuam como mentores, promovendo um ambiente de apoio emocional e desenvolvimento pessoal. Essa abordagem não apenas melhora a autoestima dos alunos, mas também os prepara para enfrentar desafios futuros com confiança e resiliência.\n\nO Colégio Pukllasunchis se destaca por sua gestão democrática, onde as decisões são tomadas em assembleias que envolvem a comunidade escolar, incluindo pais e alunos. Essa estrutura permite que todos se sintam parte do processo educacional, promovendo um senso de pertencimento e responsabilidade. A escola busca não apenas educar, mas formar cidadãos conscientes e engajados, prontos para contribuir positivamente para a sociedade, respeitando suas raízes culturais e ambientais.",
+  "metadata": {
+    "titulo": "Colégio Pukllasunchis - Cusco/Peru",
+    "temporada": 2,
+    "episodio": 4,
+    "pilar_inovacao": "Gestão Democrática",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "desconexão com a cultura",
+      "baixa autoestima"
+    ],
+    "gatilhos_conteudo": [
+      "Educação Intercultural",
+      "Sustentabilidade",
+      "Artes"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 5 - Cultura Digital",
+      "Competência 9 - Autoconhecimento e Autocuidado"
+    ]
+  }
+}

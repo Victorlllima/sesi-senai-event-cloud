@@ -1,0 +1,24 @@
+{
+  "pageContent": "A escola CESI, uma iniciativa da Confederação Nacional da Indústria (CNI), propõe uma abordagem inovadora e integrada à educação, onde o aprendizado não se limita ao ambiente escolar tradicional, mas se expande para a cidade e o mundo. A metodologia da escola é centrada na personalização da educação, respeitando as diferenças individuais e promovendo a inclusão. Os alunos têm a liberdade de escolher suas atividades e ambientes de aprendizagem, o que fortalece sua autonomia e protagonismo. A escola utiliza um sistema de itinerários de aprendizagem, onde os alunos, com o auxílio de tutores, definem suas metas e exploram conteúdos de maneira significativa e contextualizada.\n\nUm dos pilares da metodologia é a promoção de ambientes de aprendizagem flexíveis, que permitem a livre circulação dos alunos, adaptando-se às suas necessidades e interesses. As aulas são estruturadas em oficinas de aprendizagem que são moldadas a partir das sugestões dos alunos, garantindo que o currículo seja relevante e engajador. Além disso, a escola implementa práticas de gestão democrática, onde os alunos participam ativamente de assembleias e comitês, contribuindo para a tomada de decisões e o desenvolvimento de um senso de responsabilidade coletiva.\n\nA CESI também se destaca por sua abordagem interdisciplinar, utilizando metodologias ativas como a aprendizagem baseada em projetos (PBL) e a gamificação, que tornam o aprendizado mais dinâmico e conectado com a realidade dos alunos. Os estudantes são incentivados a resolver problemas do mundo real, desenvolvendo competências essenciais para o século XXI, como pensamento crítico, colaboração e criatividade. Em suma, a CESI busca transformar a educação em uma experiência rica e significativa, preparando os alunos para os desafios do futuro e promovendo uma educação integral que valoriza tanto o conhecimento acadêmico quanto o desenvolvimento emocional e social.",
+  "metadata": {
+    "titulo": "CESI - Brasil",
+    "temporada": 2,
+    "episodio": 13,
+    "pilar_inovacao": "Gestão Democrática",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "desmotivação",
+      "exclusão"
+    ],
+    "gatilhos_conteudo": [
+      "Educação Integral",
+      "Aprendizagem Baseada em Projetos",
+      "Interdisciplinaridade"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 4 - Comunicação",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

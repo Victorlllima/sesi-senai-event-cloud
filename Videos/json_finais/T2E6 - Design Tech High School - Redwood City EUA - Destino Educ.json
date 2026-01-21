@@ -1,0 +1,23 @@
+{
+  "pageContent": "A Design Tech High School, localizada em Redwood City, EUA, é um exemplo inovador de como a educação pode ser transformada através da integração de tecnologia e do pensamento de design. A escola adota uma abordagem centrada no aluno, onde os estudantes têm a liberdade de dirigir sua própria experiência de aprendizagem. Isso é facilitado por um currículo que combina aulas tradicionais com projetos práticos e interações com profissionais da indústria. Os alunos participam de um programa de interseção que os conecta com o mundo real, permitindo que eles apliquem o que aprendem em matemática, inglês e história em contextos práticos e relevantes. Essa metodologia não apenas engaja os alunos, mas também os prepara para os desafios do futuro, promovendo habilidades como criatividade, colaboração e resolução de problemas.\n\nNa prática, a escola utiliza o pensamento de design como um pilar central de sua metodologia. Os alunos são incentivados a brainstormar, construir protótipos e iterar em suas ideias, aprendendo a lidar com falhas e a buscar feedback construtivo. Isso cria um ambiente de aprendizagem dinâmico e colaborativo, onde cada estudante é encorajado a explorar suas paixões e interesses. A tecnologia desempenha um papel crucial nesse processo, com a escola implementando uma política de Chromebook um a um, garantindo que todos os alunos tenham acesso às ferramentas necessárias para sua aprendizagem.\n\nAlém disso, a Design Tech High School aborda questões como a falta de engajamento e a apatia dos alunos, proporcionando um espaço onde eles se sentem valorizados e apoiados. A escola também promove a inclusão, atendendo a comunidades historicamente marginalizadas e oferecendo oportunidades de aprendizado que podem não estar disponíveis em outros contextos. Com um foco em personalização e conhecimento cultural, a escola busca atender às necessidades individuais de cada aluno, preparando-os para uma vida de sucesso e realização após a graduação.",
+  "metadata": {
+    "titulo": "Design Tech High School - Redwood City/EUA",
+    "temporada": 2,
+    "episodio": 6,
+    "pilar_inovacao": "Aprendizagem por Projetos",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "apatia",
+      "falta de oportunidades"
+    ],
+    "gatilhos_conteudo": [
+      "Matemática",
+      "Inglês",
+      "História"
+    ],
+    "competencias_bncc": [
+      "Competência 5 - Cultura Digital",
+      "Competência 6 - Trabalho e Projeto de Vida"
+    ]
+  }
+}

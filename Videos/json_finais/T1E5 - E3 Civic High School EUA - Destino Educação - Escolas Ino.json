@@ -1,0 +1,24 @@
+{
+  "pageContent": "A E3 Civic High School, localizada em San Diego, EUA, é uma escola pública charter que adota uma metodologia inovadora centrada na aprendizagem baseada em projetos (PBL). Esta abordagem permite que os alunos se envolvam em atividades práticas e interativas, onde o aprendizado acontece através da aplicação de conhecimentos em projetos reais. Os alunos têm a liberdade de explorar suas paixões, como cinema e empreendedorismo, enquanto trabalham em projetos que integram várias disciplinas, como matemática, ciências e humanidades. A escola se destaca por sua localização dentro de uma biblioteca, proporcionando acesso a recursos valiosos e promovendo um ambiente de aprendizado colaborativo e intergeracional.\n\nCom um currículo flexível, a E3 Civic High School se adapta às necessidades individuais dos alunos, oferecendo suporte adicional através de um hub de estudos e consultoria personalizada. Os alunos são incentivados a se tornarem líderes cívicos, abordando desafios locais e globais em seus projetos, o que os prepara não apenas para o ensino superior, mas também para o mercado de trabalho. A escola promove um ambiente onde os alunos se sentem empoderados para expressar suas opiniões e se envolver em questões sociais, desenvolvendo competências essenciais para o futuro.\n\nAlém disso, a E3 Civic High School utiliza tecnologia de ponta, como o Google for Education, para facilitar o aprendizado e a colaboração. Os alunos têm a oportunidade de trabalhar em projetos interdisciplinares que abordam problemas reais, desenvolvendo habilidades críticas e criativas que os preparam para serem cidadãos ativos e responsáveis. A metodologia da escola não apenas transforma a experiência educacional, mas também busca impactar positivamente a comunidade ao redor, tornando a educação um agente de mudança social.",
+  "metadata": {
+    "titulo": "E3 Civic High School - San Diego, EUA",
+    "temporada": 1,
+    "episodio": 5,
+    "pilar_inovacao": "Aprendizagem Baseada em Projetos",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "desconexão com a realidade",
+      "dificuldades de aprendizagem"
+    ],
+    "gatilhos_conteudo": [
+      "Matemática",
+      "Ciências",
+      "Humanidades"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 3 - Pensamento Crítico",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

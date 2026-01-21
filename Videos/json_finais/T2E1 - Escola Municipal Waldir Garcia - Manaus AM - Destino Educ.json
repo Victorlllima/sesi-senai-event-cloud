@@ -1,0 +1,24 @@
+{
+  "pageContent": "A Escola Municipal Waldir Garcia, localizada em Manaus, AM, adota uma metodologia inovadora que busca integrar a educação formal com a realidade local e as necessidades dos alunos. A escola promove a educação integral, estabelecendo conexões com a comunidade e utilizando espaços externos como ambientes de aprendizagem. A metodologia valoriza a autonomia do aluno, permitindo que eles escolham livros para leitura e participem ativamente do processo de aprendizagem, em vez de serem meros ouvintes. As aulas são estruturadas em grupos colaborativos, onde os alunos trabalham juntos, trocando ideias e ajudando uns aos outros, o que fortalece o companheirismo e a amizade entre eles.\n\nAlém disso, a escola implementa práticas inclusivas, recebendo alunos de diversas origens, incluindo estrangeiros, e promovendo a convivência entre todos. A metodologia também se destaca pela utilização de assembleias, onde os alunos têm voz e podem discutir melhorias para a escola, promovendo um ambiente de gestão democrática. A escola não apenas ensina conteúdos acadêmicos, mas também trabalha habilidades socioemocionais, como empatia e respeito às diferenças, preparando os alunos para serem agentes de transformação na sociedade.\n\nA proposta pedagógica é enriquecida por atividades práticas, como a criação de uma horta, que envolve os alunos em um projeto coletivo e interdisciplinar, ligando teoria e prática. A escola busca constantemente inovar e se adaptar às novas demandas do século XXI, promovendo um aprendizado significativo e relevante para os alunos, que se sentem parte de um processo ativo e colaborativo.",
+  "metadata": {
+    "titulo": "Escola Municipal Waldir Garcia - Manaus/AM",
+    "temporada": 2,
+    "episodio": 1,
+    "pilar_inovacao": "Gestão Democrática",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "exclusão",
+      "dificuldades de adaptação"
+    ],
+    "gatilhos_conteudo": [
+      "Educação Integral",
+      "Inclusão",
+      "Habilidades Socioemocionais"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 2 - Pensamento Crítico",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

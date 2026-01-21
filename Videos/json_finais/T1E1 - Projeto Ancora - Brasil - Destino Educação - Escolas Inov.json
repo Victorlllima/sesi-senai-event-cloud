@@ -1,0 +1,25 @@
+{
+  "pageContent": "O Projeto Âncora, localizado no Brasil, é uma escola inovadora que se destaca por sua metodologia centrada na autonomia do aluno e na construção de relações humanas respeitosas. Ao invés de seguir o modelo tradicional de aulas, turmas e provas, a escola organiza seu ensino em núcleos de aprendizagem que promovem a iniciação, desenvolvimento e aprofundamento, permitindo que cada criança avance conforme seu nível de autonomia. Os educadores atuam como tutores, guiando os alunos em um processo de aprendizado colaborativo, onde eles têm a liberdade de escolher o que estudar e como planejar suas atividades diárias. Essa abordagem não apenas respeita o ritmo individual de cada aluno, mas também promove um ambiente de aprendizado que valoriza a interação e a solidariedade entre os estudantes.\n\nA metodologia do Projeto Âncora é fundamentada em cinco valores essenciais: respeito, solidariedade, responsabilidade, afetividade e honestidade. A escola busca formar cidadãos críticos e ativos, incentivando os alunos a se envolverem em projetos que impactem suas comunidades, como a criação de hortas e ações de conscientização ambiental. A avaliação é contínua e formativa, permitindo que os alunos reflitam sobre seu próprio aprendizado e conquistas, ao invés de se concentrarem apenas em notas e resultados.\n\nAlém disso, o Projeto Âncora promove uma gestão democrática, onde todos os educadores e alunos têm voz nas decisões da escola. Essa estrutura horizontal permite que os alunos desenvolvam habilidades de liderança e trabalho em equipe, preparando-os para a vida fora da escola. A proposta educacional do Projeto Âncora é, portanto, uma resposta às limitações do ensino tradicional, oferecendo uma alternativa que prioriza o desenvolvimento integral do aluno e sua capacidade de aprender a aprender, preparando-o para os desafios do futuro.",
+  "metadata": {
+    "titulo": "Projeto Âncora - Brasil",
+    "temporada": 1,
+    "episodio": 1,
+    "pilar_inovacao": "Autonomia do Aluno",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "desrespeito",
+      "dificuldades de socialização"
+    ],
+    "gatilhos_conteudo": [
+      "Matemática",
+      "Ciências",
+      "História",
+      "Geografia"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 2 - Pensamento Crítico",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

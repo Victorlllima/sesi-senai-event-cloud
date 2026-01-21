@@ -1,0 +1,25 @@
+{
+  "pageContent": "A Escola La Cecilia, localizada em uma zona rural próxima à cidade de Santa Fe, Argentina, adota uma metodologia inovadora que prioriza a autonomia do aluno e a aprendizagem colaborativa. Com um ambiente relaxado e liberal, a escola permite que os alunos escolham suas atividades em módulos, promovendo um sistema de educação personalizado. A interação entre alunos e professores é baseada em amizade e respeito, criando um espaço de diálogo onde todos podem expressar suas opiniões e interesses. A escola não utiliza castigos, mas estabelece compromissos com os alunos e pais para garantir um ambiente saudável e produtivo, incentivando a reflexão e o autoconhecimento.\n\nA estrutura curricular da La Cecilia é flexível e adaptável, permitindo que os alunos do nível inicial até o ensino secundário escolham as disciplinas que desejam cursar. As atividades incluem não apenas as matérias tradicionais, mas também yoga, educação física não competitiva e projetos autogestionados, que estimulam a criatividade e o engajamento dos alunos. A alimentação saudável é uma prioridade, com um campus vegetariano que reflete a filosofia da escola de promover uma vida saudável e consciente.\n\nAlém disso, a escola realiza assembleias semanais que funcionam como um espaço coletivo para discutir questões de interesse comum, promovendo a gestão democrática. A metodologia da La Cecilia busca não apenas a formação acadêmica, mas também o desenvolvimento de habilidades sociais e emocionais, preparando os alunos para serem cidadãos críticos e conscientes de seu papel na sociedade. A escola acredita que a mudança social começa com a transformação individual, e cada aluno é incentivado a descobrir sua vocação e contribuir para um mundo melhor.",
+  "metadata": {
+    "titulo": "La Cecilia - Santa Fe/Argentina",
+    "temporada": 1,
+    "episodio": 10,
+    "pilar_inovacao": "Autonomia do Aluno",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "dificuldades no sistema educativo",
+      "desmotivação"
+    ],
+    "gatilhos_conteudo": [
+      "Matemática",
+      "Ciências Naturais",
+      "Educação Física",
+      "Arte"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 3 - Pensamento Crítico",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

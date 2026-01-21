@@ -1,0 +1,24 @@
+{
+  "pageContent": "A Ritaharju School, localizada na Finlândia, adota uma metodologia inovadora que prioriza a aprendizagem colaborativa e a autonomia dos alunos. A escola foi projetada para ser um espaço aberto e flexível, onde os alunos podem se mover livremente entre diferentes áreas de aprendizagem, promovendo a interação e a troca de conhecimentos. Os professores atuam como facilitadores, permitindo que os alunos escolham como e onde desejam aprender, o que aumenta o engajamento e a motivação. A estrutura da escola é pensada para fomentar a criatividade e a colaboração, com espaços dedicados a atividades físicas e projetos em grupo, como a sala de movimento e os 'Solus', onde alunos de diferentes idades aprendem juntos.\n\nAlém disso, a Ritaharju School enfatiza a importância da tecnologia no processo educativo, integrando ferramentas digitais que são parte do cotidiano dos alunos. Os projetos são desenvolvidos em colaboração com os alunos, que têm a liberdade de escolher temas e métodos de apresentação, promovendo um aprendizado ativo e significativo. Essa abordagem não apenas melhora a compreensão dos conteúdos, mas também desenvolve habilidades sociais e de trabalho em equipe, preparando os alunos para os desafios do futuro.\n\nA escola enfrenta desafios como a integração de novos alunos e a manutenção de uma cultura de aprendizagem colaborativa. A metodologia aplicada na Ritaharju School resolve problemas comuns enfrentados por educadores, como a falta de engajamento e a dificuldade em adaptar o ensino às necessidades individuais dos alunos. Ao criar um ambiente de aprendizagem inclusivo e dinâmico, a escola promove um desenvolvimento integral dos alunos, alinhando-se às competências da BNCC, como a autonomia, a colaboração e o uso crítico da tecnologia.",
+  "metadata": {
+    "titulo": "Ritaharju School - Finlândia",
+    "temporada": 1,
+    "episodio": 11,
+    "pilar_inovacao": "Autonomia do Aluno",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "dificuldade de adaptação",
+      "integração de novos alunos"
+    ],
+    "gatilhos_conteudo": [
+      "Tecnologia",
+      "Educação Física",
+      "Projetos Interdisciplinares"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 5 - Cultura Digital",
+      "Competência 10 - Empatia e Cooperação"
+    ]
+  }
+}

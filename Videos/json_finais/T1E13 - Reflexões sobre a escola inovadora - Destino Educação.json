@@ -1,0 +1,24 @@
+{
+  "pageContent": "A escola CESI, uma iniciativa da CNI, propõe uma metodologia inovadora que prioriza a personalização e a autonomia do aluno em seu processo de aprendizagem. Ao invés de seguir o modelo tradicional de ensino, que agrupa os alunos por idade e conteúdo, a CESI organiza seus estudantes em núcleos de aprendizagem, onde a transição entre eles é baseada no nível de autonomia conquistada. Os alunos têm a liberdade de planejar seu dia de estudos, utilizando recursos como computadores e livros, e são acompanhados por tutores que os ajudam a traçar seus próprios caminhos de aprendizado. Essa abordagem não só promove um ambiente de aprendizado mais dinâmico e interativo, mas também incentiva os alunos a se compararem a si mesmos, focando em seu progresso pessoal em vez de competir com os colegas.\n\nAlém disso, a escola integra tecnologia de forma significativa, utilizando plataformas digitais que permitem que os alunos acessem conteúdos e realizem atividades tanto na escola quanto em casa. A CESI também adota a aprendizagem baseada em projetos, onde os alunos se envolvem em atividades práticas que conectam diferentes áreas do conhecimento, promovendo uma compreensão holística e contextualizada do aprendizado. Essa metodologia não apenas prepara os alunos para os desafios do século XXI, mas também os engaja em um processo de aprendizado ativo e colaborativo, onde a curiosidade e a criatividade são estimuladas.\n\nA proposta da CESI visa resolver problemas comuns enfrentados nas escolas tradicionais, como a falta de engajamento e a desmotivação dos alunos. Ao criar um ambiente onde o aprendizado é divertido e relevante, a escola busca formar cidadãos autônomos e críticos, capazes de se relacionar com o mundo de maneira significativa. As competências desenvolvidas pelos alunos estão alinhadas com as diretrizes da BNCC, promovendo uma educação integral que considera não apenas o conhecimento acadêmico, mas também habilidades socioemocionais essenciais para a vida.",
+  "metadata": {
+    "titulo": "CESI - Brasil",
+    "temporada": 1,
+    "episodio": 13,
+    "pilar_inovacao": "Autonomia do Aluno",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "desmotivação",
+      "bullying"
+    ],
+    "gatilhos_conteudo": [
+      "Tecnologia",
+      "Educação Socioemocional",
+      "Aprendizagem Baseada em Projetos"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 2 - Pensamento Crítico",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

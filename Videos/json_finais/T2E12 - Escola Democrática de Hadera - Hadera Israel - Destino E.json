@@ -1,0 +1,23 @@
+{
+  "pageContent": "# Escola Democrática de Hadera\n\nA Escola Democrática de Hadera, localizada em Hadera, Israel, é um exemplo inovador de educação que promove a autonomia e a participação ativa dos alunos em seu processo de aprendizagem. Com uma abordagem centrada na democracia, a escola permite que os estudantes escolham suas aulas e definam seus próprios currículos, promovendo um ambiente onde a curiosidade e o interesse pessoal são fundamentais. Os alunos têm a liberdade de explorar diferentes áreas do conhecimento, como robótica, teatro, artes e ciências, em um espaço aberto que se assemelha a um mini país, onde cada um pode decidir como viver e aprender.\n\nA metodologia da escola se baseia na ideia de que a educação deve valorizar a diversidade cultural e as individualidades de cada aluno. Em vez de um sistema tradicional de ensino, onde o foco está em notas e avaliações padronizadas, a Escola Democrática de Hadera adota um modelo de mentoramento, onde os alunos são guiados por mentores que os ajudam a identificar suas forças e interesses. O feedback é contínuo e colaborativo, permitindo que os estudantes se sintam valorizados e aceitos por quem são, e não apenas por suas habilidades acadêmicas.\n\nAlém disso, a escola promove a participação ativa dos alunos em decisões que afetam seu ambiente escolar, através de um parlamento estudantil onde todos têm voz e voto. Essa estrutura não só ensina sobre democracia, mas também prepara os alunos para serem cidadãos ativos e responsáveis em suas comunidades. A Escola Democrática de Hadera, portanto, não é apenas um espaço de aprendizado, mas um verdadeiro laboratório de vida, onde os alunos aprendem a se relacionar, a se expressar e a se engajar com o mundo ao seu redor, preparando-se para um futuro onde a adaptabilidade e a curiosidade são essenciais.\n",
+  "metadata": {
+    "titulo": "Escola Democrática de Hadera - Hadera, Israel",
+    "temporada": 2,
+    "episodio": 12,
+    "pilar_inovacao": "Gestão Democrática",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "desmotivação",
+      "dificuldades de aprendizagem"
+    ],
+    "gatilhos_conteudo": [
+      "Robótica",
+      "Artes",
+      "Ciências"
+    ],
+    "competencias_bncc": [
+      "Competência 5 - Cultura Digital",
+      "Competência 6 - Trabalho e Projeto de Vida"
+    ]
+  }
+}

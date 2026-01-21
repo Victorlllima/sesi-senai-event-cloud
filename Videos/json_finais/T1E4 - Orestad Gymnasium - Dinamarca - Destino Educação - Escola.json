@@ -1,0 +1,24 @@
+{
+  "pageContent": "O Orestad Gymnasium, localizado em Copenhague, Dinamarca, representa uma abordagem inovadora para a educação, focando em ambientes de aprendizagem abertos e flexíveis. Essa escola foi projetada para atender às diversas necessidades pedagógicas dos alunos, eliminando a rigidez do ensino tradicional. Os espaços abertos permitem que os professores utilizem métodos de ensino ativados, onde os alunos são incentivados a participar ativamente das aulas, seja por meio de discussões em grupo, trabalhos colaborativos ou atividades práticas. A metodologia inclui o uso intensivo de tecnologia, com todos os alunos utilizando laptops ou iPads, o que facilita o acesso a materiais de ensino e a colaboração em projetos. \n\nA escola também enfatiza a importância da interdisciplinaridade, permitindo que os alunos abordem problemas complexos de diferentes perspectivas, como científica, social e artística. Os alunos têm a liberdade de escolher suas linhas de estudo após um mês e meio de introdução, o que promove a autonomia e a responsabilidade em seu aprendizado. Além disso, a Orestad Gymnasium se preocupa em integrar a comunidade local ao processo educativo, incentivando os alunos a se envolverem em projetos reais e a desenvolverem competências que os preparem para a vida fora da escola. \n\nO Orestad Gymnasium busca formar cidadãos globais críticos e ativos, capacitando os alunos a refletirem sobre o mundo ao seu redor e a se tornarem agentes de mudança. A escola promove um ambiente de colaboração entre alunos e professores, onde todos são incentivados a compartilhar ideias e feedback, criando uma cultura de aprendizado contínuo e inovação. Essa abordagem não apenas melhora o engajamento dos alunos, mas também os prepara para os desafios do futuro, tornando-os mais adaptáveis e conscientes de seu papel na sociedade.",
+  "metadata": {
+    "titulo": "Orestad Gymnasium - Copenhague/Dinamarca",
+    "temporada": 1,
+    "episodio": 4,
+    "pilar_inovacao": "Ambientes de Aprendizagem Abertos",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "dificuldade em trabalhar em grupo",
+      "desconexão entre teoria e prática"
+    ],
+    "gatilhos_conteudo": [
+      "Ciências Naturais",
+      "Ciências Sociais",
+      "Mídia e Comunicação"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 4 - Comunicação",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

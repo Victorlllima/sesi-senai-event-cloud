@@ -1,0 +1,24 @@
+{
+  "pageContent": "A Escola Nave, localizada em Recife, adota uma metodologia inovadora que visa a formação de cidadãos críticos e autônomos, integrando o ensino regular com a formação técnica em Programação de Jogos Digitais e Multimídia. Com uma estrutura arquitetônica pensada para favorecer a interação e a aprendizagem, a escola promove um ambiente onde os alunos são incentivados a ver além do conhecimento tradicional, desenvolvendo habilidades socioemocionais e técnicas. A proposta pedagógica é fundamentada na educação interdimensional, que considera não apenas o desenvolvimento cognitivo, mas também o afetivo, espiritual e corpóreo dos estudantes.\n\nAs aulas são organizadas em um formato de tempo integral, onde os alunos participam de atividades práticas em laboratórios equipados e realizam projetos integrados que conectam diferentes disciplinas. A metodologia de ensino é centrada na colaboração, com a formação de times que trabalham em conjunto para resolver problemas reais, estimulando a criatividade e a capacidade de trabalhar em grupo. Além disso, a escola mantém uma forte interação com as famílias, reconhecendo a importância da parceria entre escola e lar para o desenvolvimento integral do aluno.\n\nA Escola Nave também se destaca por sua abordagem inclusiva, com um sistema de cotas que prioriza estudantes de escolas públicas, e pela ênfase em projetos que visam a transformação social, como o desenvolvimento de aplicativos que abordam questões como o desperdício de alimentos. Essa metodologia não apenas prepara os alunos para o mercado de trabalho, mas também os capacita a serem cidadãos conscientes e ativos em suas comunidades.",
+  "metadata": {
+    "titulo": "Escola Nave - Recife/Brasil",
+    "temporada": 1,
+    "episodio": 12,
+    "pilar_inovacao": "Educação Interdimensional",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "dificuldades de socialização",
+      "desmotivação"
+    ],
+    "gatilhos_conteudo": [
+      "Programação",
+      "Multimídia",
+      "Educação Socioemocional"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 2 - Pensamento Crítico",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

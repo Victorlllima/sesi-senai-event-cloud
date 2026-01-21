@@ -1,0 +1,22 @@
+{
+  "pageContent": "A High Tech High, localizada em Chula Vista, Califórnia, é uma escola pública inovadora que adota a metodologia de Aprendizagem Baseada em Projetos (ABP). Essa abordagem permite que os alunos aprendam fazendo, promovendo um ambiente de colaboração e interação entre estudantes de diferentes origens e habilidades. A escola se destaca por sua flexibilidade curricular, onde os professores têm autonomia para projetar suas aulas e integrar conteúdos de forma interdisciplinar. Os alunos não apenas memorizam informações, mas aplicam o conhecimento em projetos reais que impactam a comunidade, como a construção de casas pequenas para artistas locais. Essa conexão com o mundo real é um dos pilares da metodologia, permitindo que os alunos vejam a relevância do que aprendem e desenvolvam habilidades práticas e sociais.\n\nAlém disso, a High Tech High promove um ambiente inclusivo, onde todos os alunos são conhecidos individualmente e têm a oportunidade de se expressar e contribuir. A escola utiliza um sistema de loteria baseado em códigos de ZIP para garantir diversidade entre os alunos, sem considerar seu desempenho acadêmico anterior. Isso cria uma comunidade escolar coesa, onde o respeito e a colaboração são fundamentais. Os princípios de design da escola incluem a missão intelectual comum, a conexão com o mundo adulto, a personalização da aprendizagem e a autonomia dos professores, todos focados em democratizar a educação e preparar os alunos para o futuro.\n\nA metodologia da High Tech High resolve problemas comuns enfrentados nas escolas tradicionais, como a falta de engajamento e a desconexão entre o aprendizado e a vida prática. Ao enfatizar a aprendizagem ativa e a colaboração, a escola não só melhora o desempenho acadêmico, mas também desenvolve competências socioemocionais essenciais para o século XXI. Os alunos aprendem a trabalhar em equipe, a se comunicar efetivamente e a resolver problemas criativos, habilidades que são cada vez mais valorizadas no mercado de trabalho atual.",
+  "metadata": {
+    "titulo": "High Tech High - Chula Vista, Estados Unidos",
+    "temporada": 1,
+    "episodio": 7,
+    "pilar_inovacao": "Aprendizagem Baseada em Projetos",
+    "gatilhos_comportamentais": [
+      "falta de engajamento",
+      "desconexão entre aprendizado e vida prática"
+    ],
+    "gatilhos_conteudo": [
+      "Ciências",
+      "Matemática",
+      "Artes"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "pageContent": "A Glashan Public School, localizada em Ottawa, Canadá, é um exemplo notável de inovação educacional, focando na aprendizagem profunda e na integração de diversas disciplinas. A escola, que atende alunos do 7º e 8º ano, adota uma abordagem interdisciplinar que combina matérias como História e Artes, promovendo um ambiente de aprendizado que vai além do tradicional. A metodologia da escola é centrada na ideia de que os alunos devem ser agentes ativos em seu próprio aprendizado, utilizando o que chamam de DL5 (Deep Learning 5), que inclui componentes como cidadania, colaboração, comunicação, criatividade e pensamento crítico. Isso permite que os alunos se conectem com problemas do mundo real, desenvolvendo habilidades que são essenciais para a vida fora da escola.\n\nAlém disso, a Glashan valoriza a diversidade cultural de sua comunidade, com alunos de diferentes origens e línguas. A escola promove um ambiente inclusivo onde as experiências de vida dos alunos são reconhecidas como fontes valiosas de aprendizado. Atividades como o exercício de blanquete, que simula a história das comunidades indígenas, ajudam os alunos a entenderem melhor a complexidade da história canadense e a desenvolverem empatia e respeito pela diversidade.\n\nA escola também se destaca por suas práticas pedagógicas inovadoras, que incluem o uso de tecnologia e atividades extracurriculares que incentivam a participação ativa dos alunos. A administração da escola apoia iniciativas que visam melhorar a experiência educacional, permitindo que os alunos explorem suas paixões e interesses, tanto acadêmicos quanto sociais. Com isso, a Glashan Public School não apenas prepara seus alunos para o sucesso acadêmico, mas também para serem cidadãos responsáveis e engajados na sociedade.",
+  "metadata": {
+    "titulo": "Glashan Public School - Ottawa, Canadá",
+    "temporada": 2,
+    "episodio": 8,
+    "pilar_inovacao": "Aprendizagem Profunda",
+    "gatilhos_comportamentais": [
+      "alienação",
+      "falta de engajamento",
+      "diversidade cultural"
+    ],
+    "gatilhos_conteudo": [
+      "História",
+      "Artes",
+      "Educação Cívica"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 4 - Comunicação",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}

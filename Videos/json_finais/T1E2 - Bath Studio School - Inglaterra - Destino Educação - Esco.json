@@ -1,0 +1,24 @@
+{
+  "pageContent": "A Bath Studio School, localizada na Inglaterra, adota uma metodologia inovadora que combina aprendizado acadêmico com experiências práticas no mundo do trabalho. A escola se destaca por sua abordagem centrada no aluno, onde a autoconfiança e a capacidade de assumir riscos são incentivadas. Os estudantes são encorajados a explorar suas paixões e a desenvolver habilidades criativas em um ambiente que simula a realidade profissional, especialmente nas áreas de mídia digital e criativa. Através de um currículo flexível, que inclui qualificações como BTECs e A-Levels, a escola se adapta às necessidades individuais de cada aluno, permitindo que eles escolham disciplinas que realmente os interessam e que se alinham com suas aspirações profissionais.\n\nUm dos pilares dessa metodologia é a aprendizagem baseada em projetos, onde os alunos têm a liberdade de experimentar e criar, promovendo um aprendizado ativo e engajado. Os professores atuam como mentores, construindo relações de confiança com os alunos e oferecendo feedback contínuo, o que ajuda a moldar um ambiente de aprendizado positivo. Além disso, a escola valoriza a colaboração com empresas locais, proporcionando aos alunos oportunidades de estágio e experiências práticas que os preparam para o mercado de trabalho. Essa conexão com o mundo real é fundamental para garantir que os alunos não apenas adquiram conhecimento, mas também desenvolvam as habilidades e atitudes que são valorizadas pelos empregadores.\n\nA Bath Studio School busca resolver problemas como o desengajamento escolar e a falta de habilidades práticas entre os jovens, preparando-os para uma carreira de sucesso. Ao oferecer um espaço onde os alunos podem se sentir reconhecidos e estimulados, a escola promove uma educação que vai além da sala de aula, focando na mobilidade social e na realização das aspirações individuais de cada estudante.",
+  "metadata": {
+    "titulo": "Bath Studio School - Inglaterra",
+    "temporada": 1,
+    "episodio": 2,
+    "pilar_inovacao": "Aprendizagem por Projetos",
+    "gatilhos_comportamentais": [
+      "desengajamento",
+      "falta de autoconfiança",
+      "baixas aspirações"
+    ],
+    "gatilhos_conteudo": [
+      "Mídia Criativa",
+      "Negócios",
+      "Fotografia"
+    ],
+    "competencias_bncc": [
+      "Competência 1 - Conhecimento",
+      "Competência 2 - Pensamento Crítico",
+      "Competência 5 - Cultura Digital"
+    ]
+  }
+}
