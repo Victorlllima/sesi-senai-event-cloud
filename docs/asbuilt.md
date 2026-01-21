@@ -83,7 +83,7 @@ Tabela: `professor_entries`
 - [x] Validar estrutura de metadados no Supabase
 
 ### 📦 FASE 02: Interface do Dashboard
-**Status:** `🔄 Em Andamento` (90%)
+**Status:** `✅ Completa`
 **Subtasks:**
 - [x] Criar componente FlippingCard
 - [x] Implementar grid inicial com dados do Supabase
@@ -91,8 +91,8 @@ Tabela: `professor_entries`
 - [x] Criar componente Client Side para Filtros
 - [x] Refatorar Page para Server-Client Pattern
 - [x] Adicionar filtros por pilar de inovação
-- [ ] Implementar busca semântica com RAG
-- [ ] Criar página de detalhes do episódio
+- [x] Implementar busca semântica com RAG (Ver FASE 03)
+- [x] Criar página de detalhes do episódio
 
 **Decisão de Arquitetura:** Extração do campo 'País' feita no frontend via parsing do título ('Escola - País'). Padrão Smart-Client/Dumb-Server para filtros instantâneos.
 
@@ -132,6 +132,7 @@ http://localhost:3000/dashboard
 
 | Data | Descrição | Status |
 |------|-----------|--------|
+| 2026-01-21 | Página de Detalhes do Episódio (`/dashboard/episodio/[id]`) | ✅ Completa |
 | 2026-01-21 | FASE 03 Completa: Server Action + OpenAI Embeddings + Busca Híbrida | ✅ Completa |
 | 2026-01-21 | FASE 03: Função RPC match_documents + Input de Busca na UI | ✅ Completa |
 | 2026-01-21 | Implementação Sidebar de Filtros (País, Metodologia) + Refatoração Server-Client | ✅ Completa |
@@ -141,4 +142,4 @@ http://localhost:3000/dashboard
 
 ---
 
-Última Atualização: [2026-01-21 09:31] Atualizado por: ATLAS ⚙️
+Última Atualização: [2026-01-21 09:43] Atualizado por: ATLAS ⚙️

@@ -4,6 +4,7 @@ import { useState, useMemo, useTransition } from "react";
 import { FlippingCard } from "@/components/ui/flipping-card";
 import { Filter, X, Search, Loader2 } from "lucide-react";
 import { searchSchools } from "@/app/actions/search";
+import Link from "next/link";
 
 // Definição do formato de dados que virá do Server Component
 export interface SchoolEntry {
@@ -204,9 +205,11 @@ export function DashboardClient({ initialData }: DashboardClientProps) {
                                             <strong>BNCC:</strong> {item.cardProps.backData.details}
                                         </p>
                                     </div>
-                                    <button className="w-full bg-black text-white py-2 rounded-md hover:bg-neutral-800 transition-colors text-xs font-bold uppercase tracking-widest">
-                                        {item.cardProps.backData.buttonText}
-                                    </button>
+                                    <Link href={`/dashboard/episodio/${item.id}`} className="w-full">
+                                        <button className="w-full bg-black text-white py-2 rounded-md hover:bg-neutral-800 transition-colors text-xs font-bold uppercase tracking-widest">
+                                            {item.cardProps.backData.buttonText}
+                                        </button>
+                                    </Link>
                                 </div>
                             }
                         />
