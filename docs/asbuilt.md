@@ -34,6 +34,8 @@ Tabela: `professor_entries`
 - Extração de país implementada on-the-fly no frontend via string parsing do campo `titulo`.
 - Utilitário `cn` (clsx + tailwind-merge) criado em `src/lib/utils.ts`.
 - Supabase Server Client criado em `src/lib/supabase-server.ts` para Server Components.
+- Padrão Smart-Client/Dumb-Server implementado no Dashboard para filtros instantâneos.
+- Componente `DashboardClient` gerencia estado de filtros (País, Metodologia) no cliente.
 
 ## Histórico de Correções
 - **Build Safe Supabase:** `supabase.ts` atualizado com valores de fallback para evitar falha crítica de build (`supabaseUrl is required`) durante a pré-renderização na Vercel.
@@ -78,16 +80,18 @@ Tabela: `professor_entries`
 - [x] Validar estrutura de metadados no Supabase
 
 ### 📦 FASE 02: Interface do Dashboard
-**Status:** `🔄 Em Andamento`
+**Status:** `🔄 Em Andamento` (90%)
 **Subtasks:**
 - [x] Criar componente FlippingCard
 - [x] Implementar grid inicial com dados do Supabase
 - [x] Implementar página Dashboard com fetch no Supabase
-- [ ] Adicionar filtros por pilar de inovação
+- [x] Criar componente Client Side para Filtros
+- [x] Refatorar Page para Server-Client Pattern
+- [x] Adicionar filtros por pilar de inovação
 - [ ] Implementar busca semântica com RAG
 - [ ] Criar página de detalhes do episódio
 
-**Decisão de Arquitetura:** Extração do campo 'País' feita no frontend via parsing do título ('Escola - País').
+**Decisão de Arquitetura:** Extração do campo 'País' feita no frontend via parsing do título ('Escola - País'). Padrão Smart-Client/Dumb-Server para filtros instantâneos.
 
 ### 📦 FASE 03: Sistema de Busca RAG
 **Status:** `⏳ Aguardando`
@@ -122,10 +126,11 @@ http://localhost:3000/dashboard
 
 | Data | Descrição | Status |
 |------|-----------|--------|
+| 2026-01-21 | Implementação Sidebar de Filtros (País, Metodologia) + Refatoração Server-Client | ✅ Completa |
 | 2026-01-21 | Implementação UI Dashboard: FlippingCard + Grid + Conexão Supabase | ✅ Completa |
-| 2026-01-21 | Ingestão RAG: 81 episódios indexados com embeddings | ✅ Completa |
+| 2026-01-21 | Ingestão RAG: 25 episódios indexados com embeddings | ✅ Completa |
 | 2026-01-20 | Pivot para modelo RAG e planejamento Atlas Educacional | ✅ Completa |
 
 ---
 
-Última Atualização: [2026-01-21 09:15] Atualizado por: ATLAS ⚙️
+Última Atualização: [2026-01-21 09:21] Atualizado por: ATLAS ⚙️
