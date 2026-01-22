@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Instituto.CC | Atlas Educacional",
+  title: "Instituto.CC · SESI SENAI",
   description: "Plataforma de engajamento em tempo real para eventos educacionais do SESI/SENAI",
 };
 

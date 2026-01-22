@@ -29,8 +29,14 @@ export function ExpectationChart({ professors }: Props) {
                 .normalize('NFD')
                 .replace(/[\u0300-\u036f]/g, ''); // Limpeza básica de acentos
 
-            // Capitalizamos a primeira letra para o gráfico
-            const displayWord = word.charAt(0).toUpperCase() + word.slice(1);
+            // Tratamento especial para siglas
+            let displayWord: string;
+            if (word === 'ia') {
+                displayWord = 'IA';
+            } else {
+                // Capitalizamos a primeira letra para o gráfico
+                displayWord = word.charAt(0).toUpperCase() + word.slice(1);
+            }
 
             counts[displayWord] = (counts[displayWord] || 0) + 1;
         });
