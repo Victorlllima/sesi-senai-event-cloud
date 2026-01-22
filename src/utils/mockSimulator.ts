@@ -7,48 +7,46 @@ const MOCK_NAMES = [
     'Rodrigo', 'Carolina', 'Daniel', 'Letícia', 'Gustavo', 'Sofia', 'Eduardo', 'Isabela', 'Marcelo', 'Tatiana'
 ]
 
-const MOCK_DISCIPLINES = [
-    'Mecânica', 'Robótica', 'IA', 'Moda', 'Elétrica', 'Segurança', 'Gestão', 'TI', 'Logística',
-    'Automação', 'Edificações', 'Química', 'Alimentos', 'Design', 'Mecatrônica'
+const MOCK_EXPECTATIONS = [
+    'Motivação', 'Conhecimento', 'Inovação', 'Engajamento', 'Tecnologia', 'Aprendizado',
+    'Futuro', 'Criatividade', 'Inspiracão', 'Prática', 'Transformação', 'Networking', 'IA'
 ]
 
 export async function simulateEntry() {
     const name = MOCK_NAMES[Math.floor(Math.random() * MOCK_NAMES.length)]
-    const discipline = MOCK_DISCIPLINES[Math.floor(Math.random() * MOCK_DISCIPLINES.length)]
+    const expectation = MOCK_EXPECTATIONS[Math.floor(Math.random() * MOCK_EXPECTATIONS.length)]
 
     await supabase.from('professor_entries').insert({
         name: name,
-        discipline: discipline
+        discipline: expectation
     })
 }
 
 export async function populate(count = 50) {
-    console.log(`🚀 Iniciando inserção de ${count} professores...`)
+    console.log(`🚀 Iniciando inserção de ${count} participantes...`)
     for (let i = 0; i < count; i++) {
         simulateEntry()
-        await new Promise(r => setTimeout(r, 100))
+        await new Promise(r => setTimeout(r, 150))
     }
     console.log('✅ Carga finalizada!')
 }
 
-// 🔥 NOVA FUNÇÃO: Limpar tudo
 export async function reset() {
     console.log('🗑️ Limpando banco de dados...')
-
     const { error } = await supabase
         .from('professor_entries')
         .delete()
-        .neq('id', '00000000-0000-0000-0000-000000000000') // Deleta tudo que não tem ID zero (todos)
+        .neq('id', '00000000-0000-0000-0000-000000000000')
 
     if (error) {
         console.error('Erro ao limpar:', error)
     } else {
-        console.log('✨ Tela limpa com sucesso!')
+        console.log('✨ Tela limpa!')
     }
 }
 
 if (typeof window !== 'undefined') {
     (window as any).simulate = simulateEntry;
     (window as any).populate = populate;
-    (window as any).reset = reset; // Expondo para o console
+    (window as any).reset = reset;
 }
