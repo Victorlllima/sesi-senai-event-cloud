@@ -61,15 +61,16 @@ export default function Home() {
         {/* Nuvem de Participantes (Nomes flutuam aqui, abaixo do QR Code) */}
         <div className="w-full max-w-[98vw] py-12 relative min-h-[50vh]">
           <CommunityCloud professors={professors} />
-
-          {professors.length === 0 && (
-            <div className="flex flex-col items-center justify-center text-white opacity-40 py-20">
-              <p className="text-2xl font-heading font-bold animate-pulse">
-                AGUARDANDO DADOS...
-              </p>
-            </div>
-          )}
         </div>
+
+        {/* Mensagem Aguardando - Centralizada na tela, some com o primeiro participante */}
+        {professors.length === 0 && (
+          <div className="fixed inset-0 flex items-center justify-center z-40 pointer-events-none">
+            <p className="text-3xl font-heading font-bold text-white/30 animate-pulse tracking-widest">
+              AGUARDANDO DADOS...
+            </p>
+          </div>
+        )}
 
         {/* Seção do Gráfico (Aumentado em 50% no componente) */}
         <div className="w-full max-w-6xl px-12 mb-40">

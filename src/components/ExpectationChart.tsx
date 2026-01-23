@@ -75,10 +75,10 @@ export function ExpectationChart({ professors }: Props) {
         <div className="w-full h-[525px] bg-black/40 rounded-3xl p-8 shadow-2xl mt-20 mb-32 overflow-hidden border border-white/5">
             <div className="text-center mb-6">
                 <h3 className="text-white text-xl font-bold uppercase tracking-widest">
-                    Expectativas do Público
+                    Expectativa do Público
                 </h3>
                 <p className="text-gray-500 text-[10px] mt-1 uppercase tracking-tighter">
-                    Baseado nas palavras reais enviadas pelos participantes
+                    Baseado nas palavras enviadas pelos participantes
                 </p>
             </div>
 
