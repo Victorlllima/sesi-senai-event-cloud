@@ -14,95 +14,40 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export interface FormData {
     // Passo 1 - Identidade
     name: string
-    expectation: string // discipline no banco
+    email: string
+    expectation: string
 
-    // Passo 2 - Contexto
-    discipline: string // Disciplina real (Matemática, Português, etc.)
+    // Passo 2 - Contexto Pedagógico
+    discipline: string
     grade: string
     content: string
 
-    // Passo 3 - Metodologia
-    vibe: 'high-tech' | 'mao-na-massa' | 'social'
-    grouping: string
-
-    // Passo 4 - Logística
+    // Passo 3 - Vibe & Espaço
+    vibe: 'High-Tech' | 'Mão na Massa' | 'Social'
     space: string
+
+    // Passo 4 - Desafio
+    grouping: string
     challenge: string
-    email: string
 }
 
-// Prompt do sistema baseado na estrutura Nova Escola
-const SYSTEM_PROMPT = `Você é um especialista em inovação pedagógica e criação de planos de aula inspirados nas melhores escolas inovadoras do mundo.
-
-# Seu Objetivo
-Criar um plano de aula personalizado, prático e inspirador que o professor possa aplicar imediatamente em sua sala de aula.
-
-# Contexto das Escolas Inovadoras
-Você tem acesso a um banco de conhecimento com práticas de escolas inovadoras ao redor do mundo. Use essas referências para enriquecer o plano.
-
-# Estrutura do Conteúdo (Padrão Nova Escola)
-
-## 1. SOBRE ESTA AULA
-- Título criativo e engajador
-- Objetivo de aprendizagem (verbo de ação + conteúdo + contexto)
-- Habilidades BNCC contempladas
-- Tempo estimado
-
-## 2. MATERIAIS NECESSÁRIOS
-- Lista objetiva de materiais
-- Alternativas low-cost quando possível
-
-## 3. DESENVOLVIMENTO
-### Aquecimento (10-15 min)
-- Atividade de engajamento inicial
-- Perguntas disparadoras
-
-### Desenvolvimento (30-40 min)
-- Descrição detalhada da atividade principal
-- Passo a passo claro
-- Dicas de mediação para o professor
-
-### Fechamento (10-15 min)
-- Síntese do aprendizado
-- Avaliação formativa
-
-## 4. VARIAÇÕES E ADAPTAÇÕES
-- Para turmas com mais/menos tempo
-- Para diferentes níveis de engajamento
-- Para inclusão de alunos com necessidades especiais
-
-## 5. RESUMO DE IMPACTO
-Um parágrafo motivacional explicando como esta aula pode transformar a experiência de aprendizagem dos alunos.
-
----
-
-# Regras de Geração
-1. Seja ESPECÍFICO e PRÁTICO - o professor deve poder aplicar amanhã
-2. Use linguagem acessível e motivadora
-3. Sempre conecte com a realidade brasileira
-4. Cite a escola inovadora que inspirou a metodologia (quando aplicável)
-5. Considere o desafio comportamental informado e ofereça estratégias
-6. Adapte ao espaço físico disponível
-7. O plano deve ter entre 800-1200 palavras`
-
-// Busca vetorial no Supabase
-async function searchInnovativeSchools(query: string): Promise<string> {
+// Busca vetorial no Atlas de Inovação (Tabela documents)
+async function searchInnovativeSchools(queryText: string): Promise<string> {
     const supabase = await createServerClient()
 
     try {
-        // Gerar embedding da query
-        const embeddingResponse = await openai.embeddings.create({
+        // Gerar embedding para busca semântica
+        const embeddingRes = await openai.embeddings.create({
             model: 'text-embedding-3-small',
-            input: query,
+            input: queryText,
             encoding_format: 'float',
         })
+        const [{ embedding }] = embeddingRes.data
 
-        const queryEmbedding = embeddingResponse.data[0].embedding
-
-        // Buscar documentos similares
+        // Busca Vetorial no Atlas de Inovação
         const { data: documents, error } = await supabase.rpc('match_documents', {
-            query_embedding: queryEmbedding,
-            match_threshold: 0.3,
+            query_embedding: embedding,
+            match_threshold: 0.5,
             match_count: 3,
         })
 
@@ -115,7 +60,7 @@ async function searchInnovativeSchools(query: string): Promise<string> {
             return ''
         }
 
-        // Formatar contexto das escolas
+        // Formatar contexto das escolas com título
         const context = documents.map((doc: { content: string; metadata: { titulo?: string } }) => {
             const title = doc.metadata?.titulo || 'Escola Inovadora'
             return `### ${title}\n${doc.content}`
@@ -128,8 +73,8 @@ async function searchInnovativeSchools(query: string): Promise<string> {
     }
 }
 
-// Gerar plano de aula
-export async function generateLessonPlan(formData: FormData): Promise<{
+// Server Action principal - substitui o nó "AI Agent1" do n8n
+export async function generateInnovationPlan(formData: FormData): Promise<{
     success: boolean
     plan?: string
     error?: string
@@ -138,50 +83,82 @@ export async function generateLessonPlan(formData: FormData): Promise<{
     try {
         const supabase = await createServerClient()
 
-        // 1. Construir query para RAG
-        const ragQuery = `${formData.vibe} ${formData.space} ${formData.challenge} ${formData.discipline} ${formData.content}`
+        // 1. RAG: Busca Vetorial baseada na 'Vibe', Espaço e Desafio
+        const queryText = `${formData.vibe} ${formData.space} ${formData.challenge}`
+        const context = await searchInnovativeSchools(queryText)
 
-        // 2. Buscar contexto das escolas inovadoras
-        const schoolsContext = await searchInnovativeSchools(ragQuery)
+        // 2. Prompt de Coordenador Pedagógico (Extraído do nó 'AI Agent1')
+        const systemPrompt = `Você é um Coordenador Pedagógico Sênior especializado em T&D (Treinamento e Desenvolvimento).
 
-        // 3. Construir prompt do usuário
-        const userPrompt = `# Dados do Professor e Contexto
+Use este contexto de escolas inovadoras para enriquecer suas recomendações:
+${context || 'Sem contexto específico disponível.'}
 
-## Identificação
-- **Nome do Professor:** ${formData.name}
-- **Expectativa para a palestra:** ${formData.expectation}
+# Sua Missão
+Gerar um Plano de Aula completo e inovador que o professor possa aplicar imediatamente.
 
-## Contexto da Aula
-- **Disciplina:** ${formData.discipline}
-- **Ano/Série:** ${formData.grade}
-- **Conteúdo/Tema BNCC:** ${formData.content}
+# Estrutura Obrigatória (Padrão Nova Escola)
 
-## Metodologia Desejada
-- **Estilo (Vibe):** ${formData.vibe === 'high-tech' ? 'High-Tech (uso de tecnologia)' : formData.vibe === 'mao-na-massa' ? 'Mão na Massa (maker/hands-on)' : 'Social (colaborativo/comunidade)'}
-- **Agrupamento:** ${formData.grouping}
+## 1. ACOLHIDA SCRIPTADA (5-10 min)
+Script exato do que o professor deve dizer/fazer ao iniciar a aula.
+Inclua uma dinâmica de aquecimento relacionada ao tema.
 
-## Logística
-- **Espaço da Aula:** ${formData.space}
-- **Desafio Comportamental:** ${formData.challenge}
+## 2. QUESTÃO DISPARADORA
+Uma pergunta provocativa que engaje os alunos e conecte com suas vivências.
+Deve gerar curiosidade e debate inicial.
 
-${schoolsContext ? `
-## Referências de Escolas Inovadoras (RAG)
-${schoolsContext}
-` : ''}
+## 3. MÃO NA MASSA (Mínimo 500 palavras)
+Descrição detalhada da atividade principal:
+- Passo a passo numerado
+- Materiais necessários
+- Como organizar os grupos/espaços
+- Papel do professor durante a atividade
+- Possíveis intervenções e mediações
+- Variações para diferentes níveis
+
+## 4. SISTEMATIZAÇÃO (10-15 min)
+Como fechar a aula:
+- Síntese coletiva do aprendizado
+- Registro individual ou em grupo
+- Conexão com próximas aulas
+
+## 5. RESUMO DE IMPACTO
+Um parágrafo final motivacional explicando como esta aula pode transformar a experiência de aprendizagem.
+
+# Regras de Geração
+1. Cite as escolas inovadoras que inspiraram as práticas (quando aplicável)
+2. Considere o desafio comportamental informado e ofereça estratégias específicas
+3. Adapte ao espaço físico disponível
+4. Use linguagem acessível e motivadora
+5. Seja ESPECÍFICO - o professor deve poder aplicar amanhã`
+
+        const userPrompt = `Gere um Plano de Aula completo (em Markdown) para:
+
+**Contexto**
+- Disciplina: ${formData.discipline}
+- Série/Ano: ${formData.grade}
+- Tema/Conteúdo: ${formData.content}
+
+**Metodologia**
+- Estilo (Vibe): ${formData.vibe}
+- Espaço físico: ${formData.space}
+- Agrupamento: ${formData.grouping}
+
+**Desafio da Turma**
+${formData.challenge}
 
 ---
 
-Por favor, crie um plano de aula completo seguindo a estrutura definida.`
+Por favor, siga rigorosamente a estrutura: Acolhida Scriptada, Questão Disparadora, Mão na Massa (mínimo 500 palavras) e Sistematização. Finalize com o Resumo de Impacto.`
 
-        // 4. Chamar GPT-4o
+        // 3. Geração com GPT-4o
         const completion = await openai.chat.completions.create({
             model: 'gpt-4o',
             messages: [
-                { role: 'system', content: SYSTEM_PROMPT },
+                { role: 'system', content: systemPrompt },
                 { role: 'user', content: userPrompt }
             ],
             temperature: 0.7,
-            max_tokens: 2000,
+            max_tokens: 3000,
         })
 
         const planMarkdown = completion.choices[0]?.message?.content || ''
@@ -190,19 +167,20 @@ Por favor, crie um plano de aula completo seguindo a estrutura definida.`
             return { success: false, error: 'Não foi possível gerar o plano de aula.' }
         }
 
-        // 5. Inserir no banco de dados (dispara Realtime)
+        // 4. Inserção para Realtime e Registro (dispara confetes no Dashboard)
         const { data: entry, error: insertError } = await supabase
             .from('professor_entries')
             .insert({
                 name: formData.name,
-                discipline: formData.expectation, // Campo original usado para expectativa
+                discipline: formData.expectation, // Alimenta a Nuvem de Comunidade
+                email: formData.email,
                 grade: formData.grade,
                 content: formData.content,
                 vibe: formData.vibe,
                 space: formData.space,
+                grouping: formData.grouping,
                 challenge: formData.challenge,
-                email: formData.email,
-                plan_markdown: planMarkdown,
+                lesson_plan_markdown: planMarkdown,
                 plan_sent: false,
             })
             .select('id')
@@ -224,7 +202,7 @@ Por favor, crie um plano de aula completo seguindo a estrutura definida.`
     }
 }
 
-// Enviar e-mail com o plano
+// Enviar e-mail com o plano (Template CSS Inline do n8n)
 export async function sendPlanEmail(entryId: string, email: string, planMarkdown: string, professorName: string): Promise<{
     success: boolean
     error?: string
@@ -234,53 +212,64 @@ export async function sendPlanEmail(entryId: string, email: string, planMarkdown
 
         // Converter Markdown para HTML básico
         const planHtml = planMarkdown
-            .replace(/^### (.*$)/gim, '<h3 style="color: #ED1C24; margin-top: 24px;">$1</h3>')
-            .replace(/^## (.*$)/gim, '<h2 style="color: #1a1a1a; margin-top: 32px; border-bottom: 2px solid #ED1C24; padding-bottom: 8px;">$1</h2>')
-            .replace(/^# (.*$)/gim, '<h1 style="color: #ED1C24; font-size: 28px;">$1</h1>')
-            .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
-            .replace(/\*(.*)\*/gim, '<em>$1</em>')
-            .replace(/^- (.*$)/gim, '<li style="margin: 8px 0;">$1</li>')
+            .replace(/^### (.*$)/gim, '<h3 style="color: #0056b3; margin-top: 20px; font-size: 16px;">$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2 style="color: #0056b3; margin-top: 28px; font-size: 20px; border-bottom: 2px solid #0056b3; padding-bottom: 8px;">$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1 style="color: #0056b3; font-size: 24px; margin-bottom: 15px;">$1</h1>')
+            .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
+            .replace(/\*(.*?)\*/gim, '<em>$1</em>')
+            .replace(/^- (.*$)/gim, '<li style="margin: 6px 0; margin-left: 20px;">$1</li>')
+            .replace(/^\d+\. (.*$)/gim, '<li style="margin: 8px 0; margin-left: 20px; list-style-type: decimal;">$1</li>')
+            .replace(/\n\n/gim, '</p><p style="margin: 12px 0; line-height: 1.8;">')
             .replace(/\n/gim, '<br>')
 
+        // Template de E-mail de Impacto (CSS Inline do n8n)
         const emailHtml = `
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu Plano de Aula Personalizado</title>
+    <title>Seu Plano de Aula Inovador</title>
 </head>
-<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f5f5; margin: 0; padding: 20px;">
-    <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.1);">
+<body style="font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #f4f6f8; padding: 40px; margin: 0;">
+    <div style="max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; border-top: 8px solid #0056b3; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
         <!-- Header -->
-        <div style="background: linear-gradient(135deg, #ED1C24 0%, #c41820 100%); padding: 32px; text-align: center;">
-            <h1 style="color: #ffffff; margin: 0; font-size: 24px;">🎓 Seu Plano de Aula Personalizado</h1>
-            <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0;">Instituto.CC | SESI SENAI</p>
+        <div style="background-color: #0056b3; padding: 30px; text-align: center;">
+            <h1 style="color: #ffffff; margin: 0; font-size: 28px;">🚀 Seu Plano de Aula Chegou!</h1>
+            <p style="color: rgba(255,255,255,0.9); margin: 10px 0 0 0; font-size: 14px;">Inspirado no Atlas de Inovação Educacional</p>
         </div>
         
-        <!-- Content -->
-        <div style="padding: 32px;">
-            <p style="font-size: 16px; color: #333;">Olá, <strong>${professorName}</strong>!</p>
-            <p style="font-size: 16px; color: #666; line-height: 1.6;">
-                Preparamos um plano de aula exclusivo para você, baseado nas suas respostas e inspirado nas melhores práticas de escolas inovadoras ao redor do mundo.
+        <!-- Greeting -->
+        <div style="padding: 30px 30px 0 30px;">
+            <p style="color: #333; font-size: 16px; margin: 0;">
+                Olá, <strong>${professorName}</strong>! 👋
             </p>
-            
-            <div style="background-color: #fafafa; border-left: 4px solid #ED1C24; padding: 24px; margin: 24px 0; border-radius: 8px;">
+            <p style="color: #666; font-size: 14px; line-height: 1.6; margin: 15px 0;">
+                Preparamos um plano de aula exclusivo para você, baseado nas suas respostas e inspirado nas práticas das melhores escolas inovadoras do mundo.
+            </p>
+        </div>
+        
+        <!-- Divider -->
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 30px;">
+        
+        <!-- Content -->
+        <div style="padding: 0 30px 30px 30px; line-height: 1.8; color: #333;">
+            <p style="margin: 12px 0; line-height: 1.8;">
                 ${planHtml}
-            </div>
-            
-            <p style="font-size: 14px; color: #888; text-align: center; margin-top: 32px;">
-                Este plano foi gerado com IA e revisado com base em práticas pedagógicas inovadoras.<br>
-                Adapte conforme a realidade da sua turma!
+            </p>
+        </div>
+        
+        <!-- CTA -->
+        <div style="background: #eaf7ff; padding: 20px 30px; border-left: 4px solid #0056b3; margin: 0 30px 30px 30px;">
+            <p style="margin: 0; color: #333; font-size: 14px;">
+                <strong>💡 Dica:</strong> Adapte este plano à realidade da sua turma! Você conhece seus alunos melhor do que ninguém.
             </p>
         </div>
         
         <!-- Footer -->
-        <div style="background-color: #1a1a1a; padding: 24px; text-align: center;">
-            <p style="color: #999; font-size: 12px; margin: 0;">
-                Agente de Inovação | Instituto.CC<br>
-                © 2026 - Transformando a Educação
-            </p>
+        <div style="background: #333; color: #888; padding: 20px 30px; text-align: center; font-size: 12px;">
+            <p style="margin: 0;">Agente de Inovação Pedagógica | Instituto.CC</p>
+            <p style="margin: 8px 0 0 0; color: #666;">SESI | SENAI - Transformando a Educação</p>
         </div>
     </div>
 </body>
@@ -290,7 +279,7 @@ export async function sendPlanEmail(entryId: string, email: string, planMarkdown
         const { error: emailError } = await resend.emails.send({
             from: 'Agente de Inovação <meajuda@oinstituto.cc>',
             to: email,
-            subject: `🎓 Seu Plano de Aula Personalizado - ${professorName}`,
+            subject: `🚀 Seu Plano de Aula Chegou, ${professorName}!`,
             html: emailHtml,
         })
 
