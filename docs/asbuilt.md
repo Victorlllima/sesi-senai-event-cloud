@@ -140,6 +140,7 @@ http://localhost:3000/dashboard
 
 | Data | Descrição | Status |
 |------|-----------|--------|
+| 2026-01-23 | PIVOT: Migração do fluxo n8n/WhatsApp para Formulário RAG Nativo | 🔄 Em Andamento |
 | 2026-01-21 | Merge da feature de detalhes. Sistema funcional completo em `dev`. | ✅ Completa |
 | 2026-01-21 | Página de Detalhes do Episódio (`/dashboard/episodio/[id]`) | ✅ Completa |
 | 2026-01-21 | FASE 03 Completa: Server Action + OpenAI Embeddings + Busca Híbrida | ✅ Completa |
@@ -151,4 +152,32 @@ http://localhost:3000/dashboard
 
 ---
 
-Última Atualização: [2026-01-21 09:49] Atualizado por: ATLAS ⚙️
+## 🔄 PIVOT: Formulário RAG Nativo (2026-01-23)
+
+### Objetivo
+Desativar fluxo n8n/WhatsApp e implementar formulário multi-etapas no Next.js que coleta dados pedagógicos, realiza busca vetorial (RAG) e gera Plano de Aula com IA.
+
+### Componentes Criados
+- **`src/app/actions/ai-engine.ts`**: Server Action para geração de planos com RAG + GPT-4o
+- **`src/components/InnovationForm.tsx`**: Formulário multi-etapas (4 passos)
+- **`src/app/gerar-plano/page.tsx`**: Nova rota para hospedar o formulário
+
+### Fluxo do Formulário
+1. **Passo 1 (Identidade)**: Nome + Expectativa → Alimenta Nuvem de Comunidade
+2. **Passo 2 (Contexto)**: Disciplina + Ano/Série + Conteúdo BNCC
+3. **Passo 3 (Metodologia)**: Vibe (High-Tech, Mão na Massa, Social) + Agrupamento
+4. **Passo 4 (Logística)**: Espaço da aula + Desafio comportamental + E-mail
+
+### Engine de IA
+- Busca vetorial via `match_documents` RPC
+- Prompt estruturado "Padrão Nova Escola"
+- Geração com GPT-4o
+- Envio de e-mail via Resend
+
+### Campos Adicionados à Tabela `professor_entries`
+- `grade`, `content`, `vibe`, `space`, `challenge`, `email`, `plan_markdown`, `plan_sent`
+
+---
+
+Última Atualização: [2026-01-23 11:40] Atualizado por: ATLAS ⚙️
+

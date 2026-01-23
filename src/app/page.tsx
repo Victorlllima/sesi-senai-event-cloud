@@ -34,16 +34,16 @@ export default function Home() {
           </div>
 
           {/* QR Code Quadrado - Centralizado de forma absoluta para alinhar perfeitamente com o centro da tela (e o gráfico abaixo) */}
-          <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center group">
+          <a href="/gerar-plano" className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center group cursor-pointer">
             <div className="relative w-64 h-64 bg-white p-3 rounded-2xl shadow-[0_0_60px_rgba(237,28,36,0.3)] border-4 border-icc-red transition-all duration-500 hover:scale-105">
-              <Image src="/assets/qrcode.png" alt="QR Code" fill className="object-contain" priority />
+              <Image src="/assets/qrcode-form.png" alt="QR Code" fill className="object-contain" priority />
             </div>
             <div className="mt-3 px-6 py-1.5 bg-icc-red/20 backdrop-blur-md rounded-full border border-icc-red/30">
               <p className="text-white text-[10px] font-bold tracking-[0.3em] uppercase">
                 Escaneie para participar
               </p>
             </div>
-          </div>
+          </a>
 
           {/* Contador (Canto Superior Direito) */}
           <div className="text-right flex flex-col items-end">
